@@ -62,108 +62,22 @@
 
 </ol>
 
-3. Opis każdej funkcji:
-<table>
- <tr>
-   <th>
-    FUNKCJA
-   </th>
-  <td>Dzialanie funkcji:</td>
- </tr>
- <tr>
-  <td> 
-   Main()
-  </td>
-  <td>
-   • To główna funkcja aplikacji która uruchamia program i prezentuje menu wyboru opcji użytkownikownikowi <br>
-   • Na podstawie wyboru użytkownika, funkcja wywołuje odpowiednie metody
- </td>
- </tr>
- <tr>
-  <td>
-   Aktualny_Rozklad()
-  </td>
-  <td>
-   • Wyświetla aktualny rozkład jazdy <br>
-   • Jeśli lista rozkladJazdy jest pusta, informuje użytkownika o braku połączeń
-  </td>
-</tr> 
-<tr>
- <td>
-   DodajPolaczenie()
- </td>
- <td>
-   • Pozwala użytkownikowi na dodanie nowego połaczenia w formacie: MiastoA - MiastoB, Godzina Odjazdu, Godzina Przyjazdu, Cena biletu. <br>
-   • Oblicza czas dojazdu, gdzie czas przyjazdu jest po północy
-</td>
-</tr>
-<tr>
-<td>
-   Aktualizacja()
- </td>
- <td>
-   • Umożliwia aktualizowanie istniejącego połaczenia na podstawie jego indeksu. <br>
-   • Pozwala zmienić godzinę odjazdu, przyjazdu oraz automatycznie aktualizuje czas przejazdu.
-</td>
-</tr>
-<tr>
- <td>
-   UsunPolaczenie()
-  </td>
- <td>
-   • Usuwa połączenie z listy na pdstawie indeksu wybranego przez użytkownika <br>
-   • Po usunięciu wyświetla że połączenie zostało usunięte
-</td>
-</tr>
-<tr>
- <td>
-   FiltrujPolaczenia()
-  </td>
- <td>
-   • Główna funkcja filtrowania pozwala użytkownikowi wybrać sposób filtrowania: po mieście, cenie lub czasie dojazdu.
-</td>
-</tr>
-<tr>
- <td>
-   FiltrujPoMiescie()
- </td>
- <td>
-   • Filtruje połączenie na podstawie podanego miasta
-</td>
-</tr>
-<tr>
- <td>
-   FiltrujPoCenie()
-  </td>
- <td>
-   • Filtruje połączenie na podstawie maksymalnej ceny biletu
-</td>
-</tr>
-<tr>
- <td>
-   KupBilet()
-  </td>
- <td>
-   • Pozwala użytkownikowi zakupić bilet na wybrane połaczenie, zapisując dane biletu do pliku bilety.txt
-</td>
-</tr>
-<tr>
- <td>
-   ZapiszRozklad()
- </td>
- <td>
-   • Zapisuje aktualny rozkład jazdy do pliku rozklad_jazdy.txt przed zakończeniem programu.
-</td>
-</tr>
-<tr>
- <td>
-   Aktualny_Rozklad()
-  </td>
- <td>
-  • Wyświetla aktualny rozkład jazdy. <br>
-  • Jeśli lista rozkladJazdy jest pusta, informuje użytkownika o braku połączeń.
-  </td>
-</table>
+### 3. Opis każdej funkcji:
+
+| FUNKCJA                | Działanie funkcji:                                                                                                                                                      |
+|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `Main()`                | • To główna funkcja aplikacji, która uruchamia program i prezentuje menu wyboru opcji użytkownikowi. <br> • Na podstawie wyboru użytkownika, funkcja wywołuje odpowiednie metody. |
+| `Aktualny_Rozklad()`    | • Wyświetla aktualny rozkład jazdy. <br> • Jeśli lista rozkladJazdy jest pusta, informuje użytkownika o braku połączeń.                                           |
+| `DodajPolaczenie()`     | • Pozwala użytkownikowi na dodanie nowego połączenia w formacie: MiastoA - MiastoB, Godzina Odjazdu, Godzina Przyjazdu, Cena biletu. <br> • Oblicza czas dojazdu, gdzie czas przyjazdu jest po północy. |
+| `Aktualizacja()`        | • Umożliwia aktualizowanie istniejącego połączenia na podstawie jego indeksu. <br> • Pozwala zmienić godzinę odjazdu, przyjazdu oraz automatycznie aktualizuje czas przejazdu. |
+| `UsunPolaczenie()`      | • Usuwa połączenie z listy na podstawie indeksu wybranego przez użytkownika. <br> • Po usunięciu wyświetla, że połączenie zostało usunięte.                        |
+| `FiltrujPolaczenia()`   | • Główna funkcja filtrowania pozwala użytkownikowi wybrać sposób filtrowania: po mieście, cenie lub czasie dojazdu.                                                 |
+| `FiltrujPoMiescie()`    | • Filtruje połączenie na podstawie podanego miasta.                                                                                                                  |
+| `FiltrujPoCenie()`      | • Filtruje połączenie na podstawie maksymalnej ceny biletu.                                                                                                         |
+| `KupBilet()`            | • Pozwala użytkownikowi zakupić bilet na wybrane połączenie, zapisując dane biletu do pliku bilety.txt.                                                             |
+| `ZapiszRozklad()`       | • Zapisuje aktualny rozkład jazdy do pliku rozklad_jazdy.txt przed zakończeniem programu.                                                                           |
+| `Aktualny_Rozklad()`    | • Wyświetla aktualny rozkład jazdy. <br> • Jeśli lista rozkladJazdy jest pusta, informuje użytkownika o braku połączeń.                                           |
+
  •Postępuj zgodnie z instrukcjami pojawiającymi się w konsoli, aby wykonać wybrane operacje.
  [1] Dodaj połączenie: Dodaj nowe połączenie, podając informacje w formacie: MiastoA - MiastoB, Godzina Odjazdu, Godzina Przyjazdu, Cena biletu.
  [2] Zaaktualizuj połączenie: Zaktualizuj istniejące połączenie, podając jego indeks.
