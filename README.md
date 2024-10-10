@@ -11,6 +11,14 @@
 3. Opis każdej funkcji:
 <table>
  <tr>
+  <th>
+   FUNKCJA
+  </th>
+  <tr>
+   Dzialanie funkcji:
+  </tr>
+ </tr>
+ <tr>
   <td> 
    Main()
   </td>
