@@ -14,9 +14,9 @@
   <th>
    FUNKCJA
   </th>
-  <tr>
+  <td>
    <td>Dzialanie funkcji:</td>
-  </tr>
+  </td>
  </tr>
  <tr>
   <td> 
