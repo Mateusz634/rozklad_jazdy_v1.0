@@ -45,11 +45,11 @@
  [0] Zakończ: Zapisz aktualny rozkład i zakończ program.<br>
   
 Działanie: 
-pierwsze wyświetla się menu z opcjami:
+pierwsze wyświetla się menu z opcjami:<br>
 <img title="ActivityWatch" src="/1.png" align="center">
 
 **1. Zaloguj się**
-2. Zarejestruj się
+2. Zarejestruj się <br>
  https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 Logowanie na podstawie adresu email i hasła 
 Rejestracja: imię, nazwisko, adres email, hasło
