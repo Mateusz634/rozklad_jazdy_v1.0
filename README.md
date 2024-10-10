@@ -1,6 +1,5 @@
 <h1>SYSTEM ZARZĄDZANIA AUTOBUSAMI ORAZ UŻYTKOWNIKAMI</h1>
 
-<img title="ActivityWatch" src="/1.png" align="center">
 <ol>
  <li>Opis projektu
  <p>Aplikacja umożliwia swobodne wyszukiwanie przejazdu autobusów, zakub biletów oraz zarządzanie użytkownikami na twoich liniach autobusowych.</p>
@@ -60,10 +59,12 @@
  [0] Zakończ: Zapisz aktualny rozkład i zakończ program.
   
 Działanie: 
-pierwsze wyświetla się menu z opcjami: 
-1. Zaloguj się
+pierwsze wyświetla się menu z opcjami:
+<img title="ActivityWatch" src="/1.png" align="center">
+
+**1. Zaloguj się**
 2. Zarejestruj się
- 
+ https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
 Logowanie na podstawie adresu email i hasła 
 Rejestracja: imię, nazwisko, adres email, hasło
  
