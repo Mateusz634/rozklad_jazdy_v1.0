@@ -15,7 +15,7 @@
    FUNKCJA
   </th>
   <tr>
-   Dzialanie funkcji:
+   <td>Dzialanie funkcji:</td>
   </tr>
  </tr>
  <tr>
