@@ -36,13 +36,13 @@
 | `Aktualny_Rozklad()`    | • Wyświetla aktualny rozkład jazdy. <br> • Jeśli lista rozkladJazdy jest pusta, informuje użytkownika o braku połączeń.                                           |
 
  ### Postępuj zgodnie z instrukcjami pojawiającymi się w konsoli, aby wykonać wybrane operacje. <br>
- [1] Dodaj połączenie: Dodaj nowe połączenie, podając informacje w formacie: MiastoA - MiastoB, Godzina Odjazdu, Godzina Przyjazdu, Cena biletu.<br>
- [2] Zaaktualizuj połączenie: Zaktualizuj istniejące połączenie, podając jego indeks.<br>
- [3] Usuń połączenie: Usuń połączenie na podstawie indeksu.<br>
- [4] Filtruj: Filtruj połączenia według miasta, ceny lub czasu dojazdu.<br>
- [5] Aktualny rozkład: Zobacz listę wszystkich połączeń.<br>
- [6] Kup bilet: Wybierz połączenie i kup bilet, podając swoje imię i nazwisko.<br>
- [0] Zakończ: Zapisz aktualny rozkład i zakończ program.<br>
+ [1] Dodaj połączenie<br>
+ [2] Zaaktualizuj połączenie<br>
+ [3] Usuń połączenie<br>
+ [4] Filtruj<br>
+ [5] Aktualny rozkład<br>
+ [6] Kup bilet<br>
+ [0] Zakończ<br>
   
 ### Działanie: 
 pierwsze wyświetla się menu z opcjami:<br>
