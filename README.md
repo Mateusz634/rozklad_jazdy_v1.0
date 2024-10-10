@@ -9,11 +9,16 @@
 </ol>
 
 3. Opis każdej funkcji:
-   
+<table>
+ <tr>
+  <td> 
    Main()
+  </td>
+  <td>
    • To główna funkcja aplikacji która uruchamia program i prezentuje menu wyboru opcji użytkownikownikowi
    • Na podstawie wyboru użytkownika, funkcja wywołuje odpowiednie metody
- 
+ </td>
+ </tr>
    Aktualny_Rozklad()
    • Wyświetla aktualny rozkład jazdy
    • Jeśli lista rozkladJazdy jest pusta, informuje użytkownika o braku połączeń
@@ -48,7 +53,7 @@
    Aktualny_Rozklad()
   • Wyświetla aktualny rozkład jazdy.
   • Jeśli lista rozkladJazdy jest pusta, informuje użytkownika o braku połączeń.
-
+</table>
  •Postępuj zgodnie z instrukcjami pojawiającymi się w konsoli, aby wykonać wybrane operacje.
  [1] Dodaj połączenie: Dodaj nowe połączenie, podając informacje w formacie: MiastoA - MiastoB, Godzina Odjazdu, Godzina Przyjazdu, Cena biletu.
  [2] Zaaktualizuj połączenie: Zaktualizuj istniejące połączenie, podając jego indeks.
