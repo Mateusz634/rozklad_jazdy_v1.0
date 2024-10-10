@@ -50,7 +50,7 @@ pierwsze wyświetla się menu z opcjami:<br>
 
 **1. Zaloguj się**<br>
 2. Zarejestruj się <br>
- https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
+<a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">test</a>
 Logowanie na podstawie adresu email i hasła 
 Rejestracja: imię, nazwisko, adres email, hasło
  
