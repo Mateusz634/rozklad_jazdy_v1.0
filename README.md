@@ -1,12 +1,12 @@
 <h1>SYSTEM ZARZĄDZANIA AUTOBUSAMI ORAZ UŻYTKOWNIKAMI</h1>
  
+<ul>
+ <li>Opis projektu
+ <p>Aplikacja umożliwia swobodne wyszukiwanie przejazdu autobusów, zakub biletów oraz zarządzanie użytkownikami na twoich liniach autobusowych.</p>
+ </li>
 
-1. Opis projektu
-   SYSTEM ZARZĄDZANIA AUTOBUSAMI ORAZ UŻYTKOWNIKAMI
-
-   Aplikacja umożliwia swobodne wyszukiwanie przejazdu autobusów, zakub biletów oraz zarządzanie użytkownikami na twoich liniach autobusowych.
-
-2. Architektura aplikacji
+ <li>Architektura aplikacji</li>
+</ul>
 
 3. Opis każdej funkcji:
    
