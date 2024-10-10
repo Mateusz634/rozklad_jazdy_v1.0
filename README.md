@@ -46,24 +46,18 @@
    ZapiszRozklad()
    • Zapisuje aktualny rozkład jazdy do pliku rozklad_jazdy.txt przed zakończeniem programu.
     
- 
+   Aktualny_Rozklad()
+  • Wyświetla aktualny rozkład jazdy.
+  • Jeśli lista rozkladJazdy jest pusta, informuje użytkownika o braku połączeń.
 
-Aktualny_Rozklad()
-
-Wyświetla aktualny rozkład jazdy.
-Jeśli lista rozkladJazdy jest pusta, informuje użytkownika o braku połączeń.
-
-
-Wybierz jedną z dostępnych opcji:
-
-[1] Dodaj połączenie: Dodaj nowe połączenie, podając informacje w formacie: MiastoA - MiastoB, Godzina Odjazdu, Godzina Przyjazdu, Cena biletu.
-[2] Zaaktualizuj połączenie: Zaktualizuj istniejące połączenie, podając jego indeks.
-[3] Usuń połączenie: Usuń połączenie na podstawie indeksu.
-[4] Filtruj: Filtruj połączenia według miasta, ceny lub czasu dojazdu.
-[5] Aktualny rozkład: Zobacz listę wszystkich połączeń.
-[6] Kup bilet: Wybierz połączenie i kup bilet, podając swoje imię i nazwisko.
-[0] Zakończ: Zapisz aktualny rozkład i zakończ program.
-Postępuj zgodnie z instrukcjami pojawiającymi się w konsoli, aby wykonać wybrane operacje.
+ •Postępuj zgodnie z instrukcjami pojawiającymi się w konsoli, aby wykonać wybrane operacje.
+ [1] Dodaj połączenie: Dodaj nowe połączenie, podając informacje w formacie: MiastoA - MiastoB, Godzina Odjazdu, Godzina Przyjazdu, Cena biletu.
+ [2] Zaaktualizuj połączenie: Zaktualizuj istniejące połączenie, podając jego indeks.
+ [3] Usuń połączenie: Usuń połączenie na podstawie indeksu.
+ [4] Filtruj: Filtruj połączenia według miasta, ceny lub czasu dojazdu.
+ [5] Aktualny rozkład: Zobacz listę wszystkich połączeń.
+ [6] Kup bilet: Wybierz połączenie i kup bilet, podając swoje imię i nazwisko.
+ [0] Zakończ: Zapisz aktualny rozkład i zakończ program.
   
 Działanie: 
 pierwsze wyświetla się menu z opcjami: 
