@@ -6,57 +6,59 @@
  </li>
 
  <li>Architektura aplikacji</li>
- <div style="margin-left: 200px;">
- <table border="1">
-    <thead>
-        <tr>
-            <th>Moduł</th>
-            <th>Opis</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Program</td>
-            <td>Główny punkt wejścia do aplikacji, który zarządza menu.</td>
-        </tr>
-        <tr>
-            <td>Lista Połączeń</td>
-            <td>Przechowuje wszystkie połączenia w formie listy.</td>
-        </tr>
-        <tr>
-            <td>Plik z Rozkładem</td>
-            <td>Zawiera dane o połączeniach w formacie tekstowym.</td>
-        </tr>
-        <tr>
-            <td>Menu Główne</td>
-            <td>Umożliwia wybór opcji do interakcji z aplikacją.</td>
-        </tr>
-        <tr>
-            <td>DodajPolaczenie</td>
-            <td>Dodaje nowe połączenie do listy.</td>
-        </tr>
-        <tr>
-            <td>Aktualizacjia</td>
-            <td>Aktualizuje istniejące połączenie.</td>
-        </tr>
-        <tr>
-            <td>UsunPolaczenie</td>
-            <td>Usuwa wybrane połączenie.</td>
-        </tr>
-        <tr>
-            <td>Filtruj</td>
-            <td>Oferuje opcje filtrowania połączeń.</td>
-        </tr>
-        <tr>
-            <td>KupBilet</td>
-            <td>Umożliwia zakup biletu na wybrane połączenie.</td>
-        </tr>
-        <tr>
-            <td>ZapiszRozklad</td>
-            <td>Zapisuje aktualny stan rozkładu do pliku.</td>
-        </tr>
-    </tbody>
-</table>
+<div style="margin-left: 20px;">
+    <table border="1">
+        <thead>
+            <tr>
+                <th>Moduł</th>
+                <th>Opis</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Program</td>
+                <td>Główny punkt wejścia do aplikacji, który zarządza menu.</td>
+            </tr>
+            <tr>
+                <td>Lista Połączeń</td>
+                <td>Przechowuje wszystkie połączenia w formie listy.</td>
+            </tr>
+            <tr>
+                <td>Plik z Rozkładem</td>
+                <td>Zawiera dane o połączeniach w formacie tekstowym.</td>
+            </tr>
+            <tr>
+                <td>Menu Główne</td>
+                <td>Umożliwia wybór opcji do interakcji z aplikacją.</td>
+            </tr>
+            <tr>
+                <td>DodajPolaczenie</td>
+                <td>Dodaje nowe połączenie do listy.</td>
+            </tr>
+            <tr>
+                <td>Aktualizacjia</td>
+                <td>Aktualizuje istniejące połączenie.</td>
+            </tr>
+            <tr>
+                <td>UsunPolaczenie</td>
+                <td>Usuwa wybrane połączenie.</td>
+            </tr>
+            <tr>
+                <td>Filtruj</td>
+                <td>Oferuje opcje filtrowania połączeń.</td>
+            </tr>
+            <tr>
+                <td>KupBilet</td>
+                <td>Umożliwia zakup biletu na wybrane połączenie.</td>
+            </tr>
+            <tr>
+                <td>ZapiszRozklad</td>
+                <td>Zapisuje aktualny stan rozkładu do pliku.</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
 
 </ol>
 
