@@ -6,6 +6,7 @@
  </li>
 
  <li>Architektura aplikacji</li>
+ <div style="margin-left: 20px;">
  <table border="1">
     <thead>
         <tr>
