@@ -56,13 +56,13 @@ Rejestracja: imię, nazwisko, adres email, hasło
  
 Po zalogowaniu w zależności od uprawnień:
 
- ### Użytkownik:
+ *** Użytkownik:
  1. Zmiana danych użytkownika
  2. Zmiana hasła
  3. Usunięcie konta
  9. Wyloguj się
  
- ### Administrator:
+ *** Administrator:
  1. Zarządzanie użytkownikami
     a. Dodaj użytkownika
     b. Edytuj użytkownika
