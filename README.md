@@ -44,7 +44,7 @@
  [6] Kup bilet: Wybierz połączenie i kup bilet, podając swoje imię i nazwisko.<br>
  [0] Zakończ: Zapisz aktualny rozkład i zakończ program.<br>
   
-Działanie: 
+### Działanie: 
 pierwsze wyświetla się menu z opcjami:<br>
 <img title="ActivityWatch" src="/1.png" align="center">
 
@@ -56,13 +56,13 @@ Rejestracja: imię, nazwisko, adres email, hasło
  
 Po zalogowaniu w zależności od uprawnień:
 
-Użytkownik:
+ ### Użytkownik:
  1. Zmiana danych użytkownika
  2. Zmiana hasła
  3. Usunięcie konta
  9. Wyloguj się
  
- Administrator:
+ ### Administrator:
  1. Zarządzanie użytkownikami
     a. Dodaj użytkownika
     b. Edytuj użytkownika
