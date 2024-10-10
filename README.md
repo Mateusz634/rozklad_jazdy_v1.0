@@ -1,71 +1,29 @@
-<h1>SYSTEM ZARZĄDZANIA AUTOBUSAMI ORAZ UŻYTKOWNIKAMI</h1>
+# SYSTEM ZARZĄDZANIA AUTOBUSAMI ORAZ UŻYTKOWNIKAMI
 
-<ol>
- <li>Opis projektu
- <p>Aplikacja umożliwia swobodne wyszukiwanie przejazdu autobusów, zakub biletów oraz zarządzanie użytkownikami na twoich liniach autobusowych.</p>
- </li>
+#### 1. Opis projektu
+   Aplikacja umożliwia swobodne wyszukiwanie przejazdu autobusów, zakup biletów oraz zarządzanie użytkownikami na twoich liniach autobusowych.
 
- <li>Architektura aplikacji</li>
-<div style="margin-left: 20px;">
-    <table border="1">
-        <thead>
-            <tr>
-                <th>Moduł</th>
-                <th>Opis</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Program</td>
-                <td>Główny punkt wejścia do aplikacji, który zarządza menu.</td>
-            </tr>
-            <tr>
-                <td>Lista Połączeń</td>
-                <td>Przechowuje wszystkie połączenia w formie listy.</td>
-            </tr>
-            <tr>
-                <td>Plik z Rozkładem</td>
-                <td>Zawiera dane o połączeniach w formacie tekstowym.</td>
-            </tr>
-            <tr>
-                <td>Menu Główne</td>
-                <td>Umożliwia wybór opcji do interakcji z aplikacją.</td>
-            </tr>
-            <tr>
-                <td>DodajPolaczenie</td>
-                <td>Dodaje nowe połączenie do listy.</td>
-            </tr>
-            <tr>
-                <td>Aktualizacjia</td>
-                <td>Aktualizuje istniejące połączenie.</td>
-            </tr>
-            <tr>
-                <td>UsunPolaczenie</td>
-                <td>Usuwa wybrane połączenie.</td>
-            </tr>
-            <tr>
-                <td>Filtruj</td>
-                <td>Oferuje opcje filtrowania połączeń.</td>
-            </tr>
-            <tr>
-                <td>KupBilet</td>
-                <td>Umożliwia zakup biletu na wybrane połączenie.</td>
-            </tr>
-            <tr>
-                <td>ZapiszRozklad</td>
-                <td>Zapisuje aktualny stan rozkładu do pliku.</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
+#### 2. Architektura aplikacji
 
 
-</ol>
+| Moduł             | Opis                                                                 |
+| :---:              |     :---      |
+| Program            | Główny punkt wejścia do aplikacji, który zarządza menu.             |
+| Lista Połączeń     | Przechowuje wszystkie połączenia w formie listy.                    |
+| Plik z Rozkładem   | Zawiera dane o połączeniach w formacie tekstowym.                   |
+| Menu Główne        | Umożliwia wybór opcji do interakcji z aplikacją.                    |
+| DodajPolaczenie    | Dodaje nowe połączenie do listy.                                    |
+| Aktualizacjia      | Aktualizuje istniejące połączenie.                                  |
+| UsunPolaczenie     | Usuwa wybrane połączenie.                                           |
+| Filtruj            | Oferuje opcje filtrowania połączeń.                                 |
+| KupBilet           | Umożliwia zakup biletu na wybrane połączenie.                      |
+| ZapiszRozklad      | Zapisuje aktualny stan rozkładu do pliku.                           |
 
-### 3. Opis każdej funkcji:
+
+#### 3. Opis każdej funkcji:
 
 | FUNKCJA                | Działanie funkcji:                                                                                                                                                      |
-|-----------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| :---:              |     :---      |
 | `Main()`                | • To główna funkcja aplikacji, która uruchamia program i prezentuje menu wyboru opcji użytkownikowi. <br> • Na podstawie wyboru użytkownika, funkcja wywołuje odpowiednie metody. |
 | `Aktualny_Rozklad()`    | • Wyświetla aktualny rozkład jazdy. <br> • Jeśli lista rozkladJazdy jest pusta, informuje użytkownika o braku połączeń.                                           |
 | `DodajPolaczenie()`     | • Pozwala użytkownikowi na dodanie nowego połączenia w formacie: MiastoA - MiastoB, Godzina Odjazdu, Godzina Przyjazdu, Cena biletu. <br> • Oblicza czas dojazdu, gdzie czas przyjazdu jest po północy. |
