@@ -5,7 +5,6 @@
 
 #### 2. Architektura aplikacji
 
-
 | Moduł             | Opis                                                                 |
 | :---:              |     :---      |
 | Program            | Główny punkt wejścia do aplikacji, który zarządza menu.             |
@@ -71,3 +70,6 @@ Użytkownik:
  2. Przeglądanie listy uztykownikow
  9. Wyloguj się
 
+```ruby
+   test
+```
