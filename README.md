@@ -1,6 +1,6 @@
 <h1>SYSTEM ZARZĄDZANIA AUTOBUSAMI ORAZ UŻYTKOWNIKAMI</h1>
 
-<img title="ActivityWatch" src="https://activitywatch.net/img/banner.png" align="center">
+<img title="ActivityWatch" src="/1.png" align="center">
 <ol>
  <li>Opis projektu
  <p>Aplikacja umożliwia swobodne wyszukiwanie przejazdu autobusów, zakub biletów oraz zarządzanie użytkownikami na twoich liniach autobusowych.</p>
