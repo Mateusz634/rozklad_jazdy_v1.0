@@ -1,25 +1,41 @@
-﻿using Microsoft.SqlServer.Server;
 using System;
-using System.Collections.Generic;
 using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConsoleApp1
+using System.Drawing.Imaging;
+using static System.Net.Mime.MediaTypeNames;
+class Example_SetJPEGQuality
 {
-	internal class Program
+	public static void Main()
 	{
-		static void Main(string[] args)
+		ImageCodecInfo myImageCodecInfo;
+		Encoder myEncoder;
+		EncoderParameter myEncoderParameter;
+		EncoderParameters myEncoderParameters;
+		Bitmap image1;
+	
+		image1 = new Bitmap("bilet.jpg",true);
+
+		myImageCodecInfo = GetEncoderInfo("image/jpeg");
+
+		myEncoder = Encoder.Quality;
+	
+		myEncoderParameters = new EncoderParameters(1);
+
+		myEncoderParameter = new EncoderParameter(myEncoder, 25L);
+		myEncoderParameters.Param[0] = myEncoderParameter;
+		image1.Save("bilet-1.jpg", myImageCodecInfo, myEncoderParameters);
+
+	
+	}
+	private static ImageCodecInfo GetEncoderInfo(String mimeType)
+	{
+		int j;
+		ImageCodecInfo[] encoders;
+		encoders = ImageCodecInfo.GetImageEncoders();
+		for (j = 0; j < encoders.Length; ++j)
 		{
-			Bitmap image1;
-
-			image1 = new Bitmap("bilet.jpg", true);
-			RectangleF cloneRect = new RectangleF(0, 0, 100, 100);
-			System.Drawing.Imaging.PixelFormat format =
-				image1.PixelFormat;
-			Bitmap cloneBitmap = image1.Clone(cloneRect, format);
-
+			if (encoders[j].MimeType == mimeType)
+				return encoders[j];
 		}
+		return null;
 	}
 }
