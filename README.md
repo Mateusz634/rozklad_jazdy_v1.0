@@ -1,7 +1,10 @@
 # SYSTEM ZARZĄDZANIA AUTOBUSAMI ORAZ UŻYTKOWNIKAMI
 
 #### 1. Opis projektu
-   Aplikacja ma na celu ułatwienie zarządzania połączeniami autobusowymi. Umożliwia użytkownikom dodawanie, aktualizowanie, usuwanie oraz filtrowanie połączeń, a także zakup biletów na wybrane kursy
+  ### Aplikacja ma na celu ułatwienie zarządzania połączeniami autobusowymi. Umożliwia użytkownikom dodawanie, aktualizowanie, usuwanie oraz filtrowanie połączeń, a także zakup biletów na wybrane kursy
+
+### Problem i wartość
+Aplikacja rozwiązuje problem braku centralnego systemu do zarządzania rozkładami jazdy autobusów. Dzięki niej użytkownicy mogą łatwo i szybko zaktualizować swoje połączenia oraz dokonać zakupu biletów, co zwiększa wygodę i efektywność podróżowania.
 
 #### 2. Architektura aplikacji
 
