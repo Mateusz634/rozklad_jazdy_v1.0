@@ -38,14 +38,15 @@
 | `Aktualny_Rozklad()`    | • Wyświetla aktualny rozkład jazdy. <br> • Jeśli lista rozkladJazdy jest pusta, informuje użytkownika o braku połączeń.                                           |
 4. Instrukcja instalacji i uruchomienia<br>
 Krok po kroku **<br>
-**1.Pobierz kod źródłowy aplikacji.**<br>
-Otwórz Visual Studio.
-Załaduj projekt w Visual Studio.
-Skonfiguruj ścieżki do plików rozklad_jazdy.txt i bilety.txt.
-Uruchom aplikację, klikając "Start".
+1.Pobierz kod źródłowy aplikacji.
+2.Otwórz Visual Studio.
+3.Załaduj projekt w Visual Studio.
+4.Skonfiguruj ścieżki do plików rozklad_jazdy.txt i bilety.txt.
+5.Uruchom aplikację, klikając "Start".
 Wymagania systemowe
 Wersja .NET: .NET 5.0 lub nowsza.
 System operacyjny: Windows 10 lub nowszy.
+
  ### Postępuj zgodnie z instrukcjami pojawiającymi się w konsoli, aby wykonać wybrane operacje. <br>
  [1] Dodaj połączenie<br>
  [2] Zaaktualizuj połączenie<br>
