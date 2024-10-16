@@ -38,6 +38,9 @@
 | `Aktualny_Rozklad()`    | • Wyświetla aktualny rozkład jazdy. <br> • Jeśli lista rozkladJazdy jest pusta, informuje użytkownika o braku połączeń.                                           |
 ### 4. Instrukcja instalacji i uruchomienia<br>
 1.Pobierz kod źródłowy aplikacji.
+```ruby
+   git clone https://github.com/Mateusz634/rozklad_jazdy_v1.0.git
+```
 <br>2.Otwórz Visual Studio.<br>
 3.Załaduj projekt w Visual Studio.
 <br>4.Skonfiguruj ścieżki do plików rozklad_jazdy.txt i bilety.txt.<br>
@@ -76,9 +79,6 @@ Po zalogowaniu w zależności od uprawnień:
  2. Przeglądanie listy uztykownikow
  9. Wyloguj się
 
-```ruby
-   test
-```
 ### 5. Dokumentacja kodu
 Komentarze w kodzie opisują kluczowe funkcje i logikę, co ułatwia zrozumienie działania programu.
 Opis najważniejszych fragmentów kodu
