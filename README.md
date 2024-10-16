@@ -1,7 +1,7 @@
 # SYSTEM ZARZĄDZANIA AUTOBUSAMI ORAZ UŻYTKOWNIKAMI
 
 #### 1. Opis projektu
-   Aplikacja umożliwia swobodne wyszukiwanie przejazdu autobusów, zakup biletów oraz zarządzanie użytkownikami na twoich liniach autobusowych.
+   Aplikacja ma na celu ułatwienie zarządzania połączeniami autobusowymi. Umożliwia użytkownikom dodawanie, aktualizowanie, usuwanie oraz filtrowanie połączeń, a także zakup biletów na wybrane kursy
 
 #### 2. Architektura aplikacji
 
