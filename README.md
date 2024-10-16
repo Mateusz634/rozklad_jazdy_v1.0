@@ -42,7 +42,7 @@
 3.Załaduj projekt w Visual Studio.
 <br>4.Skonfiguruj ścieżki do plików rozklad_jazdy.txt i bilety.txt.<br>
 5.Uruchom aplikację, klikając "Start".
-### Wymagania systemowe
+### Wymagania systemowe <br>
 •Wersja .NET: .NET 5.0 lub nowsza.
 •System operacyjny: Windows 10 lub nowszy.
 
