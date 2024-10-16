@@ -43,7 +43,7 @@
 <br>4.Skonfiguruj ścieżki do plików rozklad_jazdy.txt i bilety.txt.<br>
 5.Uruchom aplikację, klikając "Start".
 ### Wymagania systemowe <br>
-•Wersja .NET: .NET 5.0 lub nowsza.
+•Wersja .NET: .NET 5.0 lub nowsza.<br>
 •System operacyjny: Windows 10 lub nowszy.
 
  ### Postępuj zgodnie z instrukcjami pojawiającymi się w konsoli, aby wykonać wybrane operacje. <br>
