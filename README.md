@@ -36,7 +36,7 @@
 | `KupBilet()`            | • Pozwala użytkownikowi zakupić bilet na wybrane połączenie, zapisując dane biletu do pliku bilety.txt.                                                             |
 | `ZapiszRozklad()`       | • Zapisuje aktualny rozkład jazdy do pliku rozklad_jazdy.txt przed zakończeniem programu.                                                                           |
 | `Aktualny_Rozklad()`    | • Wyświetla aktualny rozkład jazdy. <br> • Jeśli lista rozkladJazdy jest pusta, informuje użytkownika o braku połączeń.                                           |
-4. Instrukcja instalacji i uruchomienia<br>
+#### 4. Instrukcja instalacji i uruchomienia<br>
 1.Pobierz kod źródłowy aplikacji.
 <br>2.Otwórz Visual Studio.<br>
 3.Załaduj projekt w Visual Studio.
