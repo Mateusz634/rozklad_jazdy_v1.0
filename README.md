@@ -80,12 +80,11 @@ Po zalogowaniu w zależności od uprawnień:
    test
 ```
 ### 5. Dokumentacja kodu
-Komentarze w kodzie
 Komentarze w kodzie opisują kluczowe funkcje i logikę, co ułatwia zrozumienie działania programu.
 Opis najważniejszych fragmentów kodu
-Main: Główna pętla aplikacji z obsługą opcji użytkownika.
-DodajPolaczenie: Funkcja odpowiedzialna za dodanie nowego połączenia z walidacją czasu.
-Aktualizacjia: Funkcja aktualizująca istniejące połączenie, uwzględniająca logikę czasu dojazdu.
+  •Main: Główna pętla aplikacji z obsługą opcji użytkownika.
+  •DodajPolaczenie: Funkcja odpowiedzialna za dodanie nowego połączenia z walidacją czasu.
+  •Aktualizacjia: Funkcja aktualizująca istniejące połączenie, uwzględniająca logikę czasu dojazdu.
 
 ### 6. Przykłady użycia
 Scenariusze testowe
