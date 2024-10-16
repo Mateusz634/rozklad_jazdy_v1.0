@@ -37,9 +37,9 @@
 | `ZapiszRozklad()`       | • Zapisuje aktualny rozkład jazdy do pliku rozklad_jazdy.txt przed zakończeniem programu.                                                                           |
 | `Aktualny_Rozklad()`    | • Wyświetla aktualny rozkład jazdy. <br> • Jeśli lista rozkladJazdy jest pusta, informuje użytkownika o braku połączeń.                                           |
 4. Instrukcja instalacji i uruchomienia<br>
-Krok po kroku **<br>
-1.Pobierz kod źródłowy aplikacji.
-2.Otwórz Visual Studio.
+<br>Krok po kroku <br>
+<br>1.Pobierz kod źródłowy aplikacji.<br>
+<br>2.Otwórz Visual Studio.<br>
 3.Załaduj projekt w Visual Studio.
 4.Skonfiguruj ścieżki do plików rozklad_jazdy.txt i bilety.txt.
 5.Uruchom aplikację, klikając "Start".
