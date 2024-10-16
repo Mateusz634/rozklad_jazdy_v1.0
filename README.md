@@ -47,13 +47,6 @@
 •System operacyjny: Windows 10 lub nowszy.
 
  ### Postępuj zgodnie z instrukcjami pojawiającymi się w konsoli, aby wykonać wybrane operacje. <br>
- [1] Dodaj połączenie<br>
- [2] Zaaktualizuj połączenie<br>
- [3] Usuń połączenie<br>
- [4] Filtruj<br>
- [5] Aktualny rozkład<br>
- [6] Kup bilet<br>
- [0] Zakończ<br>
  ![image](https://github.com/user-attachments/assets/c1893413-ba27-4916-8eaa-8d6a52876714)
 
   
