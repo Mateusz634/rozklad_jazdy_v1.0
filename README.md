@@ -21,23 +21,6 @@
 | ZapiszRozklad      | Zapisuje aktualny stan rozkładu do pliku.                           |
 
 
-
-+--------------------------+
-|      Aplikacja           |
-+--------------------------+
-|   +------------------+   |
-|   |   Moduł Logowania|   |
-|   +------------------+   |
-|   |   Moduł Rozkładu|   |
-|   +------------------+   |
-|   |   Moduł Biletów |   |
-|   +------------------+   |
-|   |   Moduł Filtrowania |
-|   +------------------+   |
-+--------------------------+
-
-
-
 #### 3. Opis każdej funkcji:
 
 | FUNKCJA                | Działanie funkcji:                                                                                                                                                      |
