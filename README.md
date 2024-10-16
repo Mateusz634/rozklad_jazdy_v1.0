@@ -79,7 +79,7 @@ Po zalogowaniu w zależności od uprawnień:
 ```ruby
    test
 ```
-5. Dokumentacja kodu
+### 5. Dokumentacja kodu
 Komentarze w kodzie
 Komentarze w kodzie opisują kluczowe funkcje i logikę, co ułatwia zrozumienie działania programu.
 Opis najważniejszych fragmentów kodu
@@ -87,7 +87,7 @@ Main: Główna pętla aplikacji z obsługą opcji użytkownika.
 DodajPolaczenie: Funkcja odpowiedzialna za dodanie nowego połączenia z walidacją czasu.
 Aktualizacjia: Funkcja aktualizująca istniejące połączenie, uwzględniająca logikę czasu dojazdu.
 
-6. Przykłady użycia
+### 6. Przykłady użycia
 Scenariusze testowe
 Dodanie nowego połączenia:
 
@@ -104,15 +104,15 @@ Oczekiwany wynik: Wyświetlenie połączeń do 60 PLN.
 Przykłady interakcji użytkownika
 Użytkownik wybiera opcję w menu, wprowadza dane i otrzymuje odpowiednie komunikaty zwrotne.
 
-7. Błędy i ich obsługa
+### 7. Błędy i ich obsługa
 Opis obsługi błędów
 Aplikacja obsługuje błędy związane z niepoprawnym wprowadzeniem danych (np. zły format godziny, nieprawidłowy indeks połączenia) poprzez komunikaty informujące użytkownika o problemie.
 
-Lista obsługiwanych wyjątków
+### Lista obsługiwanych wyjątków
 FormatException: Gdy wprowadzone dane nie są w odpowiednim formacie (np. nieprawidłowe godziny).
 IndexOutOfRangeException: Gdy użytkownik podaje nieprawidłowy indeks połączenia.
 
-8. Wnioski i przyszłe usprawnienia
+### 8. Wnioski i przyszłe usprawnienia
 Elementy do poprawy
 Dodanie modułu logowania i rejestracji użytkowników.
 Możliwość edytowania danych pasażera przy zakupie biletu.
