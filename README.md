@@ -54,6 +54,8 @@
  [5] Aktualny rozkład<br>
  [6] Kup bilet<br>
  [0] Zakończ<br>
+ ![image](https://github.com/user-attachments/assets/c1893413-ba27-4916-8eaa-8d6a52876714)
+
   
 ### Działanie: 
 pierwsze wyświetla się menu z opcjami:<br>
@@ -125,14 +127,4 @@ Wnioski z pracy nad projektem
 Aplikacja działa zgodnie z założeniami i umożliwia efektywne zarządzanie połączeniami. Napotkane trudności obejmowały problemy z walidacją danych wejściowych. W przyszłości warto rozważyć rozszerzenie funkcji o dodatkowe opcje związane z użytkownikami.
 
 
-Grupa - Romper - Rozklad
-O to aktualny rozklad jazdy: 
-[0] Warszawa - Kraków, 08:00, 10:00, 120 min, 50 PLN
-Wybierz jedna z opcji 1-6
-[1] Dodaj polaczenie
-[2] Zaaktualizuj polaczenie
-[3] Usuwanie polaczenia
-[4] Filtruj
-[5] Aktualny rozklad
-[6] Kup Bilet
-[0] Zakończ
+
