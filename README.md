@@ -14,9 +14,10 @@ Użytkownicy zyskują wygodny dostęp do aktualnych rozkładów jazdy oraz możl
 
 
 #### 2. Architektura aplikacji
-
+<details>
+  <summary>Pokaż schemat blokowy</summary>
 ![image](https://github.com/user-attachments/assets/b6f53602-aebd-4837-8c82-f9dd8132e1c5)
-
+</details>
 
 
 | Moduł             | Opis                                                                 |
