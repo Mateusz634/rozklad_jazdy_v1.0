@@ -126,11 +126,11 @@ Aplikacja działa zgodnie z założeniami i umożliwia efektywne zarządzanie po
 | W przyszłości warto rozważyć rozszerzenie funkcji o dodatkowe opcje związane z użytkownikami.| 
 
 
-| Moduł             | Opis                                                                 |
-| :---:              |     :---      |
-| Program            | Dodanie modułu logowania i rejestracji użytkowników.             |
-| Lista Połączeń     | Możliwość edytowania danych pasażera przy zakupie biletu.                   |
-| Plik z Rozkładem   | Aplikacja działa zgodnie z założeniami i umożliwia efektywne zarządzanie połączeniami.                  |
-| Menu Główne        |  Napotkane trudności obejmowały problemy z walidacją danych wejściowych.                     |
-| DodajPolaczenie    | W przyszłości warto rozważyć rozszerzenie funkcji o dodatkowe opcje związane z użytkownikami.                               |
+| Opis                                                                 |
+|     :---      |
+| Dodanie modułu logowania i rejestracji użytkowników.             | 
+| Możliwość edytowania danych pasażera przy zakupie biletu.                   |
+| Aplikacja działa zgodnie z założeniami i umożliwia efektywne zarządzanie połączeniami.                  |
+|  Napotkane trudności obejmowały problemy z walidacją danych wejściowych.                     |
+ | W przyszłości warto rozważyć rozszerzenie funkcji o dodatkowe opcje związane z użytkownikami.                               |
 
