@@ -72,7 +72,6 @@ Users gain convenient access to current schedules and the ability to purchase ti
 - **Operating System**: Windows 10 or newer.
 
 ### Follow the instructions displayed in the console to execute selected operations. 
-<br>
 ![image](https://github.com/user-attachments/assets/c1893413-ba27-4916-8eaa-8d6a52876714)
 
 ### Operation:
