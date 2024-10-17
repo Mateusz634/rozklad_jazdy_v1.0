@@ -54,7 +54,8 @@ class Example_SetJPEGQuality
         }
 
         
-        image1.Save("bilet-1.jpg", myImageCodecInfo, myEncoderParameters);
+        string fileName = $"bilet_{DateTime.Now:ddssHH}.jpg";
+        image1.Save(fileName, myImageCodecInfo, myEncoderParameters);
 
   
         graphics.Dispose();
