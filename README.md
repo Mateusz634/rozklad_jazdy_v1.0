@@ -87,11 +87,11 @@ Opis najważniejszych fragmentów kodu
   •Aktualizacjia: Funkcja aktualizująca istniejące połączenie, uwzględniająca logikę czasu dojazdu. <br>
 
 ### 6. Przykłady użycia
-Scenariusze testowe
+Scenariusze testowe <br>
 Dodanie nowego połączenia:
 
 Wejście: Warszawa - Kraków, 08:00, 10:00, 50 PLN
-Oczekiwany wynik: Połączenie dodane.
+Oczekiwany wynik: Połączenie dodane. <br>
 Aktualizacja połączenia:
 
 Wejście: Indeks 0, nowe godziny: 08:30, 10:30
