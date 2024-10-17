@@ -131,6 +131,7 @@ Aplikacja obsługuje błędy związane z niepoprawnym wprowadzeniem danych (np. 
 
 ### 8. Wnioski i przyszłe usprawnienia
 
+| Opis                                                                 |
 |     :---      |
 | Dodanie modułu logowania i rejestracji użytkowników.             | 
 | Możliwość edytowania danych pasażera przy zakupie biletu.                   |
