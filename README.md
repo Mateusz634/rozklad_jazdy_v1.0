@@ -1,5 +1,5 @@
 # BUS AND USER MANAGEMENT SYSTEM
-
+## POLISH VERSION <a href="https://github.com/Mateusz634/rozklad_jazdy_v1.0/blob/master/README-PL.md">here</a>
 ### 1. Project Description
 #### Application Name: Bus and User Management System
 
