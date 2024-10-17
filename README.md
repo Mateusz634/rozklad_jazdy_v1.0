@@ -15,6 +15,8 @@ Użytkownicy zyskują wygodny dostęp do aktualnych rozkładów jazdy oraz możl
 
 #### 2. Architektura aplikacji
 
+ ![image]([https://github.com/user-attachments/assets/c1893413-ba27-4916-8eaa-8d6a52876714](https://github.com/Mateusz634/rozklad_jazdy_v1.0/blob/master/schemat_blokowy.png))
+
 | Moduł             | Opis                                                                 |
 | :---:              |     :---      |
 | Program            | Główny punkt wejścia do aplikacji, który zarządza menu.             |
