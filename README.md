@@ -19,6 +19,8 @@
 | Filtruj            | Oferuje opcje filtrowania połączeń.                                 |
 | KupBilet           | Umożliwia zakup biletu na wybrane połączenie.                      |
 | ZapiszRozklad      | Zapisuje aktualny stan rozkładu do pliku.                           |
+| Moduł logowania    |Zarządza procesem logowania i rejestracji użytkowników.              |
+| Moduł zarządzania  |Umożliwia administratorom zarządzanie użytkownikami.                  |
 
 
 #### 3. Opis każdej funkcji:
