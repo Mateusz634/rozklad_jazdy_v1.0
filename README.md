@@ -153,4 +153,7 @@ Aplikacja obsługuje błędy związane z niepoprawnym wprowadzeniem danych (np. 
 | Aplikacja działa zgodnie z założeniami i umożliwia efektywne zarządzanie połączeniami.                  |
 |  Napotkane trudności obejmowały problemy z walidacją danych wejściowych.                     |
  | W przyszłości warto rozważyć rozszerzenie funkcji o dodatkowe opcje związane z użytkownikami.                               |
+| Wprowadzenie dodatkowych opcji bezpieczeństwa, takich jak uwierzytelnianie dwuetapowe.|
+|Rozszerzenie funkcji o dodatkowe opcje związane z użytkownikami.|
+|Udoskonalenie interfejsu użytkownika.|
 
