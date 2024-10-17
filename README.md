@@ -3,12 +3,12 @@
 ### 1. Opis projektu
   #### Nazwa aplikacji: System zarządzania autobusami oraz użytkownikami
 
-Opis: Aplikacja ma na celu ułatwienie zarządzania połączeniami autobusowymi oraz użytkownikami. Umożliwia użytkownikom dodawanie, aktualizowanie, usuwanie oraz filtrowanie połączeń, a także zakup biletów na wybrane kursy. Dodatkowo, system zarządza kontami użytkowników, oferując różne poziomy uprawnień.
+#### Opis: Aplikacja ma na celu ułatwienie zarządzania połączeniami autobusowymi oraz użytkownikami. Umożliwia użytkownikom dodawanie, aktualizowanie, usuwanie oraz filtrowanie połączeń, a także zakup biletów na wybrane kursy. Dodatkowo, system zarządza kontami użytkowników, oferując różne poziomy uprawnień.
 
-Problem, który aplikacja rozwiązuje
+#### Problem, który aplikacja rozwiązuje
 Aplikacja rozwiązuje problem braku centralnego systemu do zarządzania rozkładami jazdy autobusów oraz użytkownikami. Dzięki niej użytkownicy mogą łatwo i szybko zaktualizować swoje połączenia, dokonać zakupu biletów oraz zarządzać swoimi danymi, co zwiększa wygodę i efektywność podróżowania.
 
-Wartości dostarczane użytkownikowi
+#### Wartości dostarczane użytkownikowi
 Użytkownicy zyskują wygodny dostęp do aktualnych rozkładów jazdy oraz możliwości zakupu biletów, a także łatwego zarządzania swoimi kontami. Administratorzy mają narzędzie do efektywnego zarządzania użytkownikami i połączeniami.
 
 
