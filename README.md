@@ -37,19 +37,19 @@ Users gain convenient access to current schedules and the ability to purchase ti
 | FUNCTION                | Functionality Description                                                                                                 |
 | :---:                   | :---                                                                                                                    |
 | `Main()`                | • The main function that starts the program and presents the menu for user option selection. <br> • Based on the user's choice, the function calls the appropriate methods. |
-| `ShowCurrentSchedule()` | • Displays the current bus schedule. <br> • If the schedule list is empty, informs the user of the lack of connections. |
-| `AddConnection()`       | • Allows the user to add a new connection in the format: CityA - CityB, Departure Time, Arrival Time, Ticket Price. <br> • Calculates travel time, considering arrival time after midnight. |
-| `UpdateConnection()`    | • Enables updating an existing connection based on its index. <br> • Allows changing departure and arrival times while automatically updating travel time. |
-| `DeleteConnection()`     | • Removes a connection from the list based on the index selected by the user. <br> • After deletion, displays a message that the connection has been removed. |
-| `FilterConnections()`    | • The main filtering function allows the user to choose how to filter: by city, price, or travel time. |
-| `FilterByCity()`         | • Filters connections based on the provided city.                                                                         |
-| `FilterByPrice()`        | • Filters connections based on the maximum ticket price.                                                                  |
-| `BuyTicket()`            | • Allows the user to purchase a ticket for a selected connection, saving ticket data to `tickets.txt`.                    |
-| `SaveSchedule()`         | • Saves the current bus schedule to `schedule.txt` before exiting the program.                                            |
-| `Login()`                | • Allows the user to log in to their account.                                                                              |
-| `Register()`             | • Enables new users to create an account.                                                                                 |
-| `EditUser()`            | • Allows the administrator to edit user data.                                                                             |
-| `DeleteUser()`          | • Allows the administrator to delete a user account.                                                                      |
+| `Aktualny_Rozklad()` | • Displays the current bus schedule. <br> • If the schedule list is empty, informs the user of the lack of connections. |
+| `DodajPolaczenie()`       | • Allows the user to add a new connection in the format: CityA - CityB, Departure Time, Arrival Time, Ticket Price. <br> • Calculates travel time, considering arrival time after midnight. |
+| `Aktualizacja()`    | • Enables updating an existing connection based on its index. <br> • Allows changing departure and arrival times while automatically updating travel time. |
+| `UsunPolaczenie()`     | • Removes a connection from the list based on the index selected by the user. <br> • After deletion, displays a message that the connection has been removed. |
+| `FiltrujPolaczenia()`    | • The main filtering function allows the user to choose how to filter: by city, price, or travel time. |
+| `FiltrujPoMiescie()`         | • Filters connections based on the provided city.                                                                         |
+| `FiltrujPoCenie()`        | • Filters connections based on the maximum ticket price.                                                                  |
+| `KupBilet()`            | • Allows the user to purchase a ticket for a selected connection, saving ticket data to `tickets.txt`.                    |
+| `ZapiszRozklad()`         | • Saves the current bus schedule to `schedule.txt` before exiting the program.                                            |
+| `Logowanie()`                | • Allows the user to log in to their account.                                                                              |
+| `Rejestracja()`             | • Enables new users to create an account.                                                                                 |
+| `EdycjaUzytkownika()`            | • Allows the administrator to edit user data.                                                                             |
+| `UsunUzytkownika()`          | • Allows the administrator to delete a user account.                                                                      |
 
 ### 4. Installation and Running Instructions
 
