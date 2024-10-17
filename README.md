@@ -95,11 +95,11 @@ Oczekiwany wynik: Połączenie dodane. <br>
 Aktualizacja połączenia:
 
 Wejście: Indeks 0, nowe godziny: 08:30, 10:30
-Oczekiwany wynik: Połączenie zaktualizowane.
+Oczekiwany wynik: Połączenie zaktualizowane. <br>
 Filtracja po cenie:
 
 Wejście: do 60 PLN
-Oczekiwany wynik: Wyświetlenie połączeń do 60 PLN.
+Oczekiwany wynik: Wyświetlenie połączeń do 60 PLN. <br>
 Przykłady interakcji użytkownika
 Użytkownik wybiera opcję w menu, wprowadza dane i otrzymuje odpowiednie komunikaty zwrotne.
 
