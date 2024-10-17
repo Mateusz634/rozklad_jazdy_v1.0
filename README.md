@@ -119,11 +119,12 @@ Wnioski z pracy nad projektem
 Aplikacja działa zgodnie z założeniami i umożliwia efektywne zarządzanie połączeniami. Napotkane trudności obejmowały problemy z walidacją danych wejściowych. W przyszłości warto rozważyć rozszerzenie funkcji o dodatkowe opcje związane z użytkownikami.
 | Wnioski            Przyszłe usprawnienia                                                     |
 | :---:              |     :---      |
-| Dodanie modułu logowania i rejestracji użytkowników.                                         |    
-| Możliwość edytowania danych pasażera przy zakupie biletu.                                    |                    
-| Aplikacja działa zgodnie z założeniami i umożliwia efektywne zarządzanie połączeniami.       |                  
-| Napotkane trudności obejmowały problemy z walidacją danych wejściowych.                      |               
-| W przyszłości warto rozważyć rozszerzenie funkcji o dodatkowe opcje związane z użytkownikami.| 
+|s| | Dodanie modułu logowania i rejestracji użytkowników.                                         |    
+|s| | Możliwość edytowania danych pasażera przy zakupie biletu.                                    |                    
+|s| | Aplikacja działa zgodnie z założeniami i umożliwia efektywne zarządzanie połączeniami.       |                  
+|s| | Napotkane trudności obejmowały problemy z walidacją danych wejściowych.                      |               
+|s| | W przyszłości warto rozważyć rozszerzenie funkcji o dodatkowe opcje związane z użytkownikami.| 
+
 
 
 
