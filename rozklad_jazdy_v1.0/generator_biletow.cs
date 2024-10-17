@@ -37,8 +37,8 @@ class Example_SetJPEGQuality
         Font arialBoldItalic = new Font("Arial", 50, FontStyle.Bold | FontStyle.Italic);
 
 
-        string imie = "Mateusz";
-        string nazwisko = "Janiczek";
+        string imie = "Ada,";
+        string nazwisko = "Kowalski";
         string cenna = "10 zl";
         string From = "Krakow";
         string to = "Warszawa";
