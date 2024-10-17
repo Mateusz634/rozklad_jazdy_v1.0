@@ -57,27 +57,32 @@
 pierwsze wyświetla się menu z opcjami:<br>
 <img title="ActivityWatch" src="/1.png" align="center">
 
-**1. Zaloguj się**<br>
-2. Zarejestruj się <br>
-<a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax">test</a>
-Logowanie na podstawie adresu email i hasła 
-Rejestracja: imię, nazwisko, adres email, hasło
- 
-Po zalogowaniu w zależności od uprawnień:
+# 1. Logowanie i rejestracja
 
- *** Użytkownik:
- 1. Zmiana danych użytkownika
- 2. Zmiana hasła
- 3. Usunięcie konta
- 9. Wyloguj się
- 
- *** Administrator:
- 1. Zarządzanie użytkownikami
-    a. Dodaj użytkownika
-    b. Edytuj użytkownika
-    c. Usuń użytkownika
- 2. Przeglądanie listy uztykownikow
- 9. Wyloguj się
+## Kroki do zalogowania się
+1. **Zaloguj się**
+2. **Zarejestruj się**
+
+### Test
+- **Logowanie**: na podstawie adresu email i hasła.
+- **Rejestracja**: imię, nazwisko, adres email, hasło.
+
+## Po zalogowaniu, w zależności od uprawnień:
+
+### **Użytkownik:**
+- Zmiana danych użytkownika
+- Zmiana hasła
+- Usunięcie konta
+- Wyloguj się
+
+### **Administrator:**
+- Zarządzanie użytkownikami:
+  a. Dodaj użytkownika  
+  b. Edytuj użytkownika  
+  c. Usuń użytkownika  
+- Przeglądanie listy użytkowników
+- Wyloguj się
+
 
 # 5. Dokumentacja kodu
 
