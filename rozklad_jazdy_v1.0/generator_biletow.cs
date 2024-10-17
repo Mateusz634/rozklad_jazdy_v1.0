@@ -1,5 +1,5 @@
 // Program umozliwnia generowanie biletow w formie jpg jest to ulepszona wersja program1.cs jednakze nie jest jeszcze dopracowana i moga wystepowac bledy
-
+// Zeby program dzialal trzeba dodac System.Drawing w odwolaniach oraz pobrac biblioteke QRCoder
 using QRCoder;
 using System;
 using System.Collections.Generic;
