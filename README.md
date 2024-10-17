@@ -45,7 +45,12 @@ Użytkownicy zyskują wygodny dostęp do aktualnych rozkładów jazdy oraz możl
 | `FiltrujPoCenie()`      | • Filtruje połączenie na podstawie maksymalnej ceny biletu.                                                                                                         |
 | `KupBilet()`            | • Pozwala użytkownikowi zakupić bilet na wybrane połączenie, zapisując dane biletu do pliku bilety.txt.                                                             |
 | `ZapiszRozklad()`       | • Zapisuje aktualny rozkład jazdy do pliku rozklad_jazdy.txt przed zakończeniem programu.                                                                           |
-| `Aktualny_Rozklad()`    | • Wyświetla aktualny rozkład jazdy. <br> • Jeśli lista rozkladJazdy jest pusta, informuje użytkownika o braku połączeń.                                           |
+| `Logowanie()`           | • Umożliwia użytkownikowi zalogowanie się na swoje konto.                                                                                                           |
+| `Rejestracja()`         | • Umożliwia nowym użytkownikom stworzenie konta.                                                                                                                    |
+| `EdycjaUzytkownika()	` | • Umożliwia administratorowi edytowanie danych użytkownika.                                                                                                         |
+| `UsunUzytkownika()	`   | • Umożliwia administratorowi usunięcie konta użytkownika.                                                                                                           |
+                                                                   
+                                                                        
 ### 4. Instrukcja instalacji i uruchomienia<br>
 # 1. Pobieranie kodu źródłowego aplikacji
 
