@@ -14,10 +14,6 @@ Użytkownicy zyskują wygodny dostęp do aktualnych rozkładów jazdy oraz możl
 
 
 #### 2. Architektura aplikacji
-<details>
-  <summary>Pokaż schemat blokowy</summary>
-  <img src="https://github.com/user-attachments/assets/b6f53602-aebd-4837-8c82-f9dd8132e1c5" alt="Schemat blokowy">
-</details>
 
 
 | Moduł             | Opis                                                                 |
@@ -32,7 +28,11 @@ Użytkownicy zyskują wygodny dostęp do aktualnych rozkładów jazdy oraz możl
 | Filtruj            | Oferuje opcje filtrowania połączeń.                                 |
 | KupBilet           | Umożliwia zakup biletu na wybrane połączenie.                      |
 | ZapiszRozklad      | Zapisuje aktualny stan rozkładu do pliku.                           |
-| Moduł logowania / zarządzania    |Zarządza procesem logowania i rejestracji użytkowników.**(dogłębnie wytłumaczone w schemacie blokowym powyżej)**              |
+| Moduł logowania / zarządzania    |Zarządza procesem logowania i rejestracji użytkowników. **(dogłębnie wytłumaczone w schemacie blokowym poniżej)**              |
+<details>
+  <summary>Pokaż schemat blokowy</summary>
+  <img src="https://github.com/user-attachments/assets/b6f53602-aebd-4837-8c82-f9dd8132e1c5" alt="Schemat blokowy">
+</details>
 
 
 #### 3. Opis każdej funkcji:
