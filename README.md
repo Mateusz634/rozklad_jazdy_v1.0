@@ -112,11 +112,6 @@ FormatException: Gdy wprowadzone dane nie są w odpowiednim formacie (np. niepra
 IndexOutOfRangeException: Gdy użytkownik podaje nieprawidłowy indeks połączenia.
 
 ### 8. Wnioski i przyszłe usprawnienia
-Elementy do poprawy
-Dodanie modułu logowania i rejestracji użytkowników.
-Możliwość edytowania danych pasażera przy zakupie biletu.
-Wnioski z pracy nad projektem
-Aplikacja działa zgodnie z założeniami i umożliwia efektywne zarządzanie połączeniami. Napotkane trudności obejmowały problemy z walidacją danych wejściowych. W przyszłości warto rozważyć rozszerzenie funkcji o dodatkowe opcje związane z użytkownikami.
 
 | Opis                                                                 |
 |     :---      |
