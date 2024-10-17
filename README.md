@@ -32,8 +32,7 @@ Użytkownicy zyskują wygodny dostęp do aktualnych rozkładów jazdy oraz możl
 | Filtruj            | Oferuje opcje filtrowania połączeń.                                 |
 | KupBilet           | Umożliwia zakup biletu na wybrane połączenie.                      |
 | ZapiszRozklad      | Zapisuje aktualny stan rozkładu do pliku.                           |
-| Moduł logowania    |Zarządza procesem logowania i rejestracji użytkowników.              |
-| Moduł zarządzania  |Umożliwia administratorom zarządzanie użytkownikami.                  |
+| Moduł logowania / zarządzania    |Zarządza procesem logowania i rejestracji użytkowników.**(dogłębnie wytłumaczone w schemacie blokowym powyżej)**              |
 
 
 #### 3. Opis każdej funkcji:
