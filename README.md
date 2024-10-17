@@ -79,37 +79,43 @@ Po zalogowaniu w zależności od uprawnień:
  2. Przeglądanie listy uztykownikow
  9. Wyloguj się
 
-### 5. Dokumentacja kodu
-Komentarze w kodzie opisują kluczowe funkcje i logikę, co ułatwia zrozumienie działania programu.
-Opis najważniejszych fragmentów kodu
-  •Main: Główna pętla aplikacji z obsługą opcji użytkownika. <br>
-  •DodajPolaczenie: Funkcja odpowiedzialna za dodanie nowego połączenia z walidacją czasu. <br>
-  •Aktualizacjia: Funkcja aktualizująca istniejące połączenie, uwzględniająca logikę czasu dojazdu. <br>
+# 5. Dokumentacja kodu
 
-### 6. Przykłady użycia
-Scenariusze testowe <br>
-Dodanie nowego połączenia:
+Komentarze w kodzie opisują kluczowe funkcje i logikę, co ułatwia zrozumienie działania programu. 
 
-Wejście: Warszawa - Kraków, 08:00, 10:00, 50 PLN
-Oczekiwany wynik: Połączenie dodane. <br>
-Aktualizacja połączenia:
+## Opis najważniejszych fragmentów kodu
+- **Main**: Główna pętla aplikacji z obsługą opcji użytkownika.
+- **DodajPolaczenie**: Funkcja odpowiedzialna za dodanie nowego połączenia z walidacją czasu.
+- **Aktualizacjia**: Funkcja aktualizująca istniejące połączenie, uwzględniająca logikę czasu dojazdu.
 
-Wejście: Indeks 0, nowe godziny: 08:30, 10:30
-Oczekiwany wynik: Połączenie zaktualizowane. <br>
-Filtracja po cenie:
+# 6. Przykłady użycia
 
-Wejście: do 60 PLN
-Oczekiwany wynik: Wyświetlenie połączeń do 60 PLN. <br>
-Przykłady interakcji użytkownika
+## Scenariusze testowe
+
+### Dodanie nowego połączenia:
+- **Wejście**: Warszawa - Kraków, 08:00, 10:00, 50 PLN
+- **Oczekiwany wynik**: Połączenie dodane.
+
+### Aktualizacja połączenia:
+- **Wejście**: Indeks 0, nowe godziny: 08:30, 10:30
+- **Oczekiwany wynik**: Połączenie zaktualizowane.
+
+### Filtracja po cenie:
+- **Wejście**: do 60 PLN
+- **Oczekiwany wynik**: Wyświetlenie połączeń do 60 PLN.
+
+## Przykłady interakcji użytkownika
 Użytkownik wybiera opcję w menu, wprowadza dane i otrzymuje odpowiednie komunikaty zwrotne.
 
-### 7. Błędy i ich obsługa
-Opis obsługi błędów
+# 7. Błędy i ich obsługa
+
+## Opis obsługi błędów
 Aplikacja obsługuje błędy związane z niepoprawnym wprowadzeniem danych (np. zły format godziny, nieprawidłowy indeks połączenia) poprzez komunikaty informujące użytkownika o problemie.
 
-### Lista obsługiwanych wyjątków
-FormatException: Gdy wprowadzone dane nie są w odpowiednim formacie (np. nieprawidłowe godziny).
-IndexOutOfRangeException: Gdy użytkownik podaje nieprawidłowy indeks połączenia.
+## Lista obsługiwanych wyjątków
+- **FormatException**: Gdy wprowadzone dane nie są w odpowiednim formacie (np. nieprawidłowe godziny).
+- **IndexOutOfRangeException**: Gdy użytkownik podaje nieprawidłowy indeks połączenia.
+
 
 ### 8. Wnioski i przyszłe usprawnienia
 
