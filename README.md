@@ -15,7 +15,8 @@ Użytkownicy zyskują wygodny dostęp do aktualnych rozkładów jazdy oraz możl
 
 #### 2. Architektura aplikacji
 
-<img src="https://github.com/user-attachments/assets/0c12f2ba-12dd-471c-9463-758aaa19b7c8" alt="image" width="900" height="700">
+![image](https://github.com/user-attachments/assets/b6f53602-aebd-4837-8c82-f9dd8132e1c5)
+
 
 
 | Moduł             | Opis                                                                 |
