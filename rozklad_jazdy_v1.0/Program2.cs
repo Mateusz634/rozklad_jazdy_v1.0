@@ -1,7 +1,9 @@
 using System;
+using System.Collections.Generic;
 using System.Reflection.Emit;
 using System.Text.RegularExpressions;
 using System.Threading;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 internal class Program
 {
     public class User
@@ -30,9 +32,9 @@ internal class Program
             stareHaslo = Console.ReadLine()!;
             Console.WriteLine("Podaj nowe haslo: ");
             noweHaslo = Console.ReadLine()!;
-            if(SprawdzHaslo(stareHaslo) == true)
+            if (SprawdzHaslo(stareHaslo) == true)
             {
-                if(SprawdzPoprawnoscHasla(noweHaslo) == true)
+                if (SprawdzPoprawnoscHasla(noweHaslo) == true)
                 {
                     Haslo = noweHaslo;
                     Console.ForegroundColor = ConsoleColor.Green;
@@ -70,7 +72,7 @@ internal class Program
 
         public void WyswietlDane()
         {
-            Console.ForegroundColor= ConsoleColor.Green;
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("\n------");
             Console.WriteLine(" DANE ");
             Console.WriteLine("------");
@@ -116,32 +118,44 @@ internal class Program
         else return false;
 
     }
-
     private static void Main(string[] args)
     {
+        string filePath = "users.txt";
+        foreach (var line in File.ReadLines(filePath))
+        {
+            string[] parts = line.Split(';');
+
+            if (parts.Length <= 5)
+            {
+                listaUzytkownikow.Add(new User(parts[0], parts[1], parts[2], parts[3], parts[4]));
+            }
+        }
+
+        /*
+        foreach (var user in listaUzytkownikow)
+        {
+            Console.WriteLine($"{user.Imie} - {user.Nazwisko} - {user.Email} - {user.Uprawnienia}");
+        }
+        */
+
         // ==============
         // PROJEKT
         // KRYSTIAN KOZA 
         // 3TP
         // ==============
 
-        // NA SAMYM DOLE CO MA ROBIC PROGRAM \/
-
         // TESTOWI UZYTKOWNICY
 
         // ADMIN - administrator 
         // mail: admin@gmail.com, haslo: admin
-        listaUzytkownikow.Add(new User("admin", "admin", "admin@gmail.com", "admin", "admin"));
 
         // USER - normalny uzytkownik
         // mail: user@gmail.com, haslo: user
-        listaUzytkownikow.Add(new User("user", "user", "user@gmail.com", "user", "user"));
 
         // TESTOWY UZYTKOWNIK - nie powinno go zalogowac bo nie nalezy do grup admin/user
         // mail: test@gmail.com, haslo: test
-        listaUzytkownikow.Add(new User("test", "test", "test@gmail.com", "test", "test"));
 
-        Console.Clear();
+        //Console.Clear();
         do
         {
             try
@@ -177,8 +191,8 @@ internal class Program
                         wybor = 0;
                         break;
 
-                    case 9: 
-                        Console.ForegroundColor= ConsoleColor.Red;
+                    case 9:
+                        Console.ForegroundColor = ConsoleColor.Red;
                         Console.Clear();
                         Console.WriteLine("================================");
                         Console.WriteLine(" ZAKOŃCZENIE DZIAŁANIA PROGRAMU ");
@@ -205,11 +219,12 @@ internal class Program
 
     }
 
+
     private static void Panel(string email)
     {
         bool inPanel = true;
         int wybor = 0;
-        var listaUprawnien = new string[] { "admin", "user"};
+        var listaUprawnien = new string[] { "admin", "user" };
 
         User uzytkownik = listaUzytkownikow.Find(u => u.SprawdzEmail(email))!;
 
@@ -220,6 +235,14 @@ internal class Program
             {
                 if (uzytkownik.Uprawnienia == "admin")
                 {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Clear();
+                    Console.WriteLine("-----------------------");
+                    Console.WriteLine(" Zalogowano pomyślnie! ");
+                    Console.WriteLine("-----------------------");
+                    Thread.Sleep(2000);
+                    Console.Clear();
+
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("======================");
                     Console.WriteLine(" PANEL ADMINISTRATORA ");
@@ -270,7 +293,7 @@ internal class Program
                             int i = 1;
                             listaUzytkownikow.ForEach(delegate (User u)
                             {
-                                if(u.Email != uzytkownik.Email) 
+                                if (u.Email != uzytkownik.Email)
                                 {
                                     Console.WriteLine($"{i}. Imie: {u.Imie}, Nazwisko: {u.Nazwisko} , Email: {u.Email}, Uprawnienia: {u.Uprawnienia}");
                                 }
@@ -304,26 +327,26 @@ internal class Program
                             });
                             i = 0;
                             Console.WriteLine("-----------------------------------------------------------------------------------------------\n");
-                            Console.ForegroundColor= ConsoleColor.Gray;
+                            Console.ForegroundColor = ConsoleColor.Gray;
                             Console.WriteLine("Podaj id uzytkownika do usuniecia: ");
                             i = int.Parse(Console.ReadLine()!);
-                            if (listaUzytkownikow[i-1].Email == uzytkownik.Email)
+                            if (listaUzytkownikow[i - 1].Email == uzytkownik.Email)
                             {
                                 Console.WriteLine("Nie mozesz usunac swojego konta!");
                             }
                             else
                             {
                                 listaUzytkownikow.Remove(listaUzytkownikow[i - 1]);
-                                Console.ForegroundColor= ConsoleColor.Green;
+                                Console.ForegroundColor = ConsoleColor.Green;
                                 Console.WriteLine("Usunieto pomyslnie!");
                                 Thread.Sleep(500);
                             }
-                            
+
                             break;
                         case 4:
                             string in_imie, in_nazwisko, in_haslo, in_email, in_uprawnienia;
 
-                            Console.ForegroundColor=ConsoleColor.Blue;
+                            Console.ForegroundColor = ConsoleColor.Blue;
                             Console.WriteLine("------------------------");
                             Console.WriteLine(" Dodawanie uzytkownika: \n");
                             Console.ForegroundColor = ConsoleColor.Gray;
@@ -334,13 +357,13 @@ internal class Program
                             Console.WriteLine("Podaj email:");
                             in_email = Console.ReadLine()!;
                             Console.WriteLine("Podaj haslo:");
-                            in_haslo= Console.ReadLine()!;
+                            in_haslo = Console.ReadLine()!;
                             Console.WriteLine("Czy ma miec uprawnienia administratora? Y/N:");
                             in_uprawnienia = Console.ReadLine()!.ToLower() == "y" ? "admin" : "user";
 
-                            if(SprawdzPoprawnoscEmail(in_email) == true)
+                            if (SprawdzPoprawnoscEmail(in_email) == true)
                             {
-                                if(SprawdzPoprawnoscHasla(in_haslo) == true)
+                                if (SprawdzPoprawnoscHasla(in_haslo) == true)
                                 {
                                     listaUzytkownikow.Add(new User(in_imie, in_nazwisko, in_email, in_haslo, in_uprawnienia));
                                     Console.ForegroundColor = ConsoleColor.Green;
@@ -348,7 +371,7 @@ internal class Program
                                 }
                                 else
                                 {
-                                    Console.ForegroundColor = ConsoleColor.Cyan; 
+                                    Console.ForegroundColor = ConsoleColor.Cyan;
                                     Console.WriteLine("\nBłąd - zły format hasla\n");
                                 }
                             }
@@ -379,7 +402,7 @@ internal class Program
                                 i++;
                             });
 
-                            i = 0; 
+                            i = 0;
                             Console.ForegroundColor = ConsoleColor.Blue;
                             Console.WriteLine("-----------------------------------------------------------------------------------------------\n");
                             Console.ForegroundColor = ConsoleColor.Gray;
@@ -387,7 +410,7 @@ internal class Program
                             i = int.Parse(Console.ReadLine()!);
                             i = i - 1;
 
-                            Console.ForegroundColor= ConsoleColor.Green;
+                            Console.ForegroundColor = ConsoleColor.Green;
                             Console.WriteLine("\nDane uzytkownika: ");
                             Console.WriteLine($"Imie: {listaUzytkownikow[i].Imie} \nNazwisko: {listaUzytkownikow[i].Nazwisko} \nHaslo: {listaUzytkownikow[i].Haslo}");
                             Console.WriteLine($"Email: {listaUzytkownikow[i].Email} \nUprawnienia: {listaUzytkownikow[i].Uprawnienia}\n");
@@ -436,15 +459,22 @@ internal class Program
                             break;
                     }
                 }
-
-                if (uzytkownik.Uprawnienia == "user")
+                else if (uzytkownik.Uprawnienia == "user")
                 {
+                    Console.ForegroundColor = ConsoleColor.Green;
+                    Console.Clear();
+                    Console.WriteLine("-----------------------");
+                    Console.WriteLine(" Zalogowano pomyślnie! ");
+                    Console.WriteLine("-----------------------");
+                    Thread.Sleep(2000);
+                    Console.Clear();
+
                     Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine("===================");
                     Console.WriteLine(" PANEL UŻYTKOWNIKA ");
                     Console.WriteLine("===================");
 
-                    
+
                     string data = DateTime.Now.ToShortDateString();
                     string godzina = DateTime.Now.ToString("HH:mm");
                     Console.WriteLine($"\nGodzina: {godzina}");
@@ -480,7 +510,7 @@ internal class Program
 
                     switch (wybor)
                     {
-                        case 1:  
+                        case 1:
                             uzytkownik.WyswietlDane();
                             break;
                         case 2:
@@ -507,10 +537,10 @@ internal class Program
 
                             if (SprawdzPoprawnoscEmail(in_email) == true)
                             {
-                                    uzytkownik.edycjaDanych(in_imie, in_nazwisko, in_email, in_haslo, in_uprawnienia);
-                                    Console.ForegroundColor = ConsoleColor.Green;
-                                    Console.WriteLine("Dane pomyślnie zmienione!\n");
-                                    Thread.Sleep(500);
+                                uzytkownik.edycjaDanych(in_imie, in_nazwisko, in_email, in_haslo, in_uprawnienia);
+                                Console.ForegroundColor = ConsoleColor.Green;
+                                Console.WriteLine("Dane pomyślnie zmienione!\n");
+                                Thread.Sleep(500);
                             }
                             else
                             {
@@ -520,12 +550,12 @@ internal class Program
                             break;
                         case 4:
                             int usuwanieKonta;
-                            Console.ForegroundColor= ConsoleColor.Blue;
+                            Console.ForegroundColor = ConsoleColor.Blue;
                             Console.WriteLine("----------------");
                             Console.WriteLine(" USUWANIE KONTA ");
                             Console.Write("\nJestes pewien?: Y/N ");
                             usuwanieKonta = Console.ReadLine()!.ToLower() == "y" ? 1 : 0;
-                            if(usuwanieKonta == 1)
+                            if (usuwanieKonta == 1)
                             {
                                 listaUzytkownikow.Remove(uzytkownik);
                                 Console.ForegroundColor = ConsoleColor.Red;
@@ -547,15 +577,15 @@ internal class Program
                             break;
                     }
                 }
-
-                if (!listaUprawnien.Contains(uzytkownik.Uprawnienia))
+                else if (!listaUprawnien.Contains(uzytkownik.Uprawnienia))
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.Clear();
                     Console.WriteLine("-----------------------------------");
                     Console.WriteLine(" Błąd logowania! - brak uprawnień ");
                     Console.WriteLine("-----------------------------------");
-                    Thread.Sleep(2000);
+                    Thread.Sleep(4000);
+                    Console.Clear();
                     break;
                 }
             }
@@ -628,12 +658,6 @@ internal class Program
                 }
                 else
                 {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.Clear();
-                    Console.WriteLine("-----------------------");
-                    Console.WriteLine(" Zalogowano pomyślnie! ");
-                    Console.WriteLine("-----------------------");
-                    Thread.Sleep(2000);
                     Panel(email);
                     return;
                 }
@@ -704,7 +728,7 @@ internal class Program
                     continue;
                 }
 
-                if(SprawdzPoprawnoscHasla(haslo) == false)
+                if (SprawdzPoprawnoscHasla(haslo) == false)
                 {
                     Console.Clear();
                     Console.ForegroundColor = ConsoleColor.Cyan;
@@ -720,6 +744,7 @@ internal class Program
                 Console.WriteLine(" Rejestracja zakończona pomyślnie! ");
                 Console.WriteLine("-----------------------------------");
                 Thread.Sleep(2000);
+                Console.Clear();
                 break;
 
             }
@@ -733,41 +758,3 @@ internal class Program
 
     }
 }
-
-
-
-
-// ================================================
-// 
-// Program do zarządzania użytkownikami 
-// Działanie: 
-// pierwsze wyświetla się menu z opcjami: 
-// 1. Zaloguj się
-// 2. Zarejestruj się
-// 
-// Logowanie na podstawie adresu email i hasła 
-// Rejestracja: imię, nazwisko, adres email, hasło
-// 
-// Po zalogowaniu w zależności od uprawnień:
-// 
-// Użytkownik:
-// 1. Zmiana danych użytkownika
-// 2. Zmiana hasła
-// 3. Usunięcie konta
-// 9. Wyloguj się
-// 
-// Administrator:
-// 1. Zarządzanie użytkownikami
-//    a. Dodaj użytkownika
-//    b. Edytuj użytkownika
-//    c. Usuń użytkownika
-// 2. Przeglądanie listy uztykownikow
-// 9. Wyloguj się
-//
-//
-// ================================================
-// BRAK TYCH FUNKCJI:
-// - Resetowanie hasła
-// - Ustawienia bezpieczeństwa (pomocnicze pytania do logowania)
-// 
-// ================================================
