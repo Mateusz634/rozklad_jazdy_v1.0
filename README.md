@@ -1,6 +1,6 @@
 # BUS AND USER MANAGEMENT SYSTEM
 ## POLISH VERSION <a href="https://github.com/Mateusz634/rozklad_jazdy_v1.0/blob/master/README-PL.md">here</a>
-### 1. Project Description
+## 1. Project Description
 #### Application Name: Bus and User Management System
 
 #### Description:
@@ -12,7 +12,7 @@ The application addresses the lack of a centralized system for managing bus sche
 #### User Value:
 Users gain convenient access to current schedules and the ability to purchase tickets, along with easy account management. Administrators have tools for effectively managing users and connections.
 
-### 2. Application Architecture
+## 2. Application Architecture
 
 | Module             | Description                                                                 |
 | :---:              | :---                                                                      |
@@ -32,7 +32,7 @@ Users gain convenient access to current schedules and the ability to purchase ti
   <img src="https://github.com/user-attachments/assets/b6f53602-aebd-4837-8c82-f9dd8132e1c5" alt="Flowchart">
 </details>
 
-### 3. Function Descriptions:
+## 3. Function Descriptions:
 
 | FUNCTION                | Functionality Description                                                                                                 |
 | :---:                   | :---                                                                                                                    |
@@ -51,7 +51,7 @@ Users gain convenient access to current schedules and the ability to purchase ti
 | `EdycjaUzytkownika()`            | • Allows the administrator to edit user data.                                                                             |
 | `UsunUzytkownika()`          | • Allows the administrator to delete a user account.                                                                      |
 
-### 4. Installation and Running Instructions
+## 4. Installation and Running Instructions
 
 #### 1. Download the source code of the application.
 
@@ -79,7 +79,7 @@ First, a menu with options is displayed:
 <br>
 <img title="ActivityWatch" src="/1.png" align="center">
 
-# 1. Login and Registration
+## 6. Login and Registration
 
 ## Steps to Log In:
 1. **Log in**
@@ -105,7 +105,7 @@ First, a menu with options is displayed:
 - View the list of users
 - Log out
 
-# 5. Code Documentation
+## 7. Code Documentation
 
 Comments in the code describe key functions and logic, facilitating understanding of the program's operation.
 
@@ -114,7 +114,7 @@ Comments in the code describe key functions and logic, facilitating understandin
 - **AddConnection**: Function responsible for adding a new connection with time validation.
 - **UpdateConnection**: Function that updates an existing connection, considering travel time logic.
 
-# 6. Usage Examples
+## 8. Usage Examples
 
 ## Test Scenarios
 
@@ -133,7 +133,7 @@ Comments in the code describe key functions and logic, facilitating understandin
 ## Examples of User Interaction:
 The user selects an option from the menu, enters data, and receives appropriate feedback messages.
 
-# 7. Error Handling
+## 9. Error Handling
 
 ## Description of Error Handling:
 The application handles errors related to incorrect data input (e.g., wrong time format, invalid connection index) through messages informing the user of the problem.
@@ -142,7 +142,7 @@ The application handles errors related to incorrect data input (e.g., wrong time
 - **FormatException**: When input data is not in the correct format (e.g., invalid times).
 - **IndexOutOfRangeException**: When the user provides an invalid connection index.
 
-### 8. Conclusions and Future Improvements
+## 10. Conclusions and Future Improvements
 
 | Conclusions and Future Improvements                                                              |
 | :---                                                                                             |
