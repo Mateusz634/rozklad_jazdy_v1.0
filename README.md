@@ -59,7 +59,7 @@ Users gain convenient access to current schedules and the ability to purchase ti
 1. **Download the application source code.**
    ```bash
    git clone https://github.com/Mateusz634/bus_management_system.git
-# 2. Running the Application
+## 5. Running the Application
 
 ## Steps to Run the Application:
 1. **Open Visual Studio.**
