@@ -229,20 +229,19 @@ internal class Program
         User uzytkownik = listaUzytkownikow.Find(u => u.SprawdzEmail(email))!;
 
         Console.Clear();
+        Console.ForegroundColor = ConsoleColor.Green;
+        Console.Clear();
+        Console.WriteLine("-----------------------");
+        Console.WriteLine(" Zalogowano pomyślnie! ");
+        Console.WriteLine("-----------------------");
+        Thread.Sleep(2000);
+        Console.Clear();
         do
         {
             try
             {
                 if (uzytkownik.Uprawnienia == "admin")
                 {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.Clear();
-                    Console.WriteLine("-----------------------");
-                    Console.WriteLine(" Zalogowano pomyślnie! ");
-                    Console.WriteLine("-----------------------");
-                    Thread.Sleep(2000);
-                    Console.Clear();
-
                     Console.ForegroundColor = ConsoleColor.Red;
                     Console.WriteLine("======================");
                     Console.WriteLine(" PANEL ADMINISTRATORA ");
@@ -286,6 +285,7 @@ internal class Program
                     switch (wybor)
                     {
                         case 1:
+                            Console.Clear();
                             Console.ForegroundColor = ConsoleColor.Yellow;
                             Console.WriteLine("\n--------------------");
                             Console.WriteLine(" LISTA UZYTKOWNIKOW ");
@@ -308,9 +308,11 @@ internal class Program
 
                             break;
                         case 2:
+                            Console.Clear();
                             uzytkownik.zmianaHasla();
                             break;
                         case 3:
+                            Console.Clear();
                             i = 1;
                             Console.ForegroundColor = ConsoleColor.Yellow;
                             listaUzytkownikow.ForEach(delegate (User u)
@@ -345,7 +347,7 @@ internal class Program
                             break;
                         case 4:
                             string in_imie, in_nazwisko, in_haslo, in_email, in_uprawnienia;
-
+                            Console.Clear();
                             Console.ForegroundColor = ConsoleColor.Blue;
                             Console.WriteLine("------------------------");
                             Console.WriteLine(" Dodawanie uzytkownika: \n");
@@ -382,6 +384,7 @@ internal class Program
                             }
                             break;
                         case 5:
+                            Console.Clear();
                             Console.ForegroundColor = ConsoleColor.Blue;
                             Console.WriteLine("---------------------");
                             Console.WriteLine(" Edycja uzytkownika:\n");
@@ -461,13 +464,6 @@ internal class Program
                 }
                 else if (uzytkownik.Uprawnienia == "user")
                 {
-                    Console.ForegroundColor = ConsoleColor.Green;
-                    Console.Clear();
-                    Console.WriteLine("-----------------------");
-                    Console.WriteLine(" Zalogowano pomyślnie! ");
-                    Console.WriteLine("-----------------------");
-                    Thread.Sleep(2000);
-                    Console.Clear();
 
                     Console.ForegroundColor = ConsoleColor.Blue;
                     Console.WriteLine("===================");
