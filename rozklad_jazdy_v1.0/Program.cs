@@ -10,14 +10,16 @@ namespace MainApp
             try
             {
                 Console.WriteLine("Witaj w programie zarządzania rozkładem jazdy!");
-                Console.Write("Podaj swoje imię (Admin/User): ");
+                Console.Write("Podaj swoje imię (np. Admin lub User): ");
                 string imie = Console.ReadLine();
 
-                User zalogowanyUzytkownik = ZarzadzanieUzytkownikami.Zaloguj(imie);
+                // Logowanie użytkownika
+                var zalogowanyUzytkownik = Program.Zaloguj(imie);
 
-                if (File.Exists(RozkladJazdy.sciezkaPliku))
+                // Wczytanie rozkładu jazdy, jeśli istnieje
+                if (File.Exists(Program.sciezkaPliku))
                 {
-                    RozkladJazdy.rozkladJazdy.AddRange(File.ReadAllLines(RozkladJazdy.sciezkaPliku));
+                    Program.rozkladJazdy.AddRange(File.ReadAllLines(Program.sciezkaPliku));
                 }
 
                 bool exit = false;
@@ -39,14 +41,15 @@ namespace MainApp
                     switch (wybor)
                     {
                         case 1:
-                            RozkladJazdy.Aktualny_Rozklad();
+                            // Wyświetlanie rozkładu jazdy
+                            Program.Aktualny_Rozklad();
                             break;
                         case 2:
                             if (zalogowanyUzytkownik.Uprawnienia == "admin")
                             {
-                                Console.Write("Podaj nowe połączenie: ");
+                                Console.Write("Podaj nowe połączenie w formacie: MiastoA - MiastoB, Godz. Odjazdu, Godz. Przyjazdu, Cena: ");
                                 string nowePolaczenie = Console.ReadLine();
-                                RozkladJazdy.DodajPolaczenie(nowePolaczenie);
+                                Program.DodajPolaczenie(nowePolaczenie);
                             }
                             else
                             {
@@ -56,7 +59,7 @@ namespace MainApp
                         case 3:
                             if (zalogowanyUzytkownik.Uprawnienia == "admin")
                             {
-                                RozkladJazdy.ZapiszRozklad();
+                                Program.ZapiszRozklad();
                             }
                             else
                             {
