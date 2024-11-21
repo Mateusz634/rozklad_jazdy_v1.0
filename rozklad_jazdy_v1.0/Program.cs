@@ -1,5 +1,6 @@
-using Rozklad;
-using Manager; 
+using Rozklad; // Przestrzeń nazw dla zarządzania rozkładem jazdy
+using Manager; // Przestrzeń nazw dla zarządzania użytkownikami
+
 namespace MainApp
 {
     internal class MainProgram
@@ -12,9 +13,14 @@ namespace MainApp
                 Console.Write("Podaj swoje imię (Admin/User): ");
                 string imie = Console.ReadLine();
 
-                User zalogowanyUzytkownik = Manager.listaUzytkownikow.Find(u => u.Imie == imie)
-                                            ?? throw new Exception("Nie znaleziono użytkownika.");
+                // Wyszukiwanie użytkownika w liście użytkowników
+                var zalogowanyUzytkownik = Manager.listaUzytkownikow.Find(u => u.Imie == imie);
+                if (zalogowanyUzytkownik == null)
+                {
+                    throw new Exception("Nie znaleziono użytkownika.");
+                }
 
+                // Ładowanie rozkładu jazdy
                 if (File.Exists(Rozklad.Rozklad.sciezkaPliku))
                 {
                     Rozklad.Rozklad.rozkladJazdy.AddRange(File.ReadAllLines(Rozklad.Rozklad.sciezkaPliku));
@@ -49,7 +55,8 @@ namespace MainApp
                             if (zalogowanyUzytkownik.Uprawnienia == "admin")
                             {
                                 Console.Write("Podaj nowe połączenie: ");
-                                Rozklad.Rozklad.DodajPolaczenie();
+                                string nowePolaczenie = Console.ReadLine();
+                                Rozklad.Rozklad.DodajPolaczenie(nowePolaczenie);
                             }
                             else
                             {
