@@ -1,6 +1,5 @@
 using Rozklad;
-using static Rozklad.Rozklad;
-using static Manager.Manager;
+using Manager; // Zamiast UserManagement, używamy Manager jako odpowiednika zarządzania użytkownikami
 
 namespace MainApp
 {
@@ -14,11 +13,14 @@ namespace MainApp
                 Console.Write("Podaj swoje imię (Admin/User): ");
                 string imie = Console.ReadLine();
 
-                User zalogowanyUzytkownik = Zaloguj(imie);
+                // Szukanie użytkownika w liście użytkowników
+                User zalogowanyUzytkownik = Manager.listaUzytkownikow.Find(u => u.Imie == imie) 
+                                            ?? throw new Exception("Nie znaleziono użytkownika.");
 
-                if (File.Exists(Rozklad.RozkladJazdy.sciezkaPliku))
+                // Ładowanie rozkładu jazdy, jeśli plik istnieje
+                if (File.Exists(Rozklad.Rozklad.sciezkaPliku))
                 {
-                    RozkladJazdy.rozkladJazdy.AddRange(File.ReadAllLines(RozkladJazdy.sciezkaPliku));
+                    Rozklad.Rozklad.rozkladJazdy.AddRange(File.ReadAllLines(Rozklad.Rozklad.sciezkaPliku));
                 }
 
                 bool exit = false;
@@ -35,19 +37,23 @@ namespace MainApp
                     Console.WriteLine("[0] Wyjdź");
 
                     Console.Write("Wybierz opcję: ");
-                    int wybor = int.Parse(Console.ReadLine());
+                    if (!int.TryParse(Console.ReadLine(), out int wybor))
+                    {
+                        Console.WriteLine("Błędny wybór. Spróbuj ponownie.");
+                        continue;
+                    }
 
                     switch (wybor)
                     {
                         case 1:
-                            RozkladJazdy.Aktualny_Rozklad();
+                            Rozklad.Rozklad.Aktualny_Rozklad();
                             break;
                         case 2:
                             if (zalogowanyUzytkownik.Uprawnienia == "admin")
                             {
                                 Console.Write("Podaj nowe połączenie: ");
                                 string nowePolaczenie = Console.ReadLine();
-                                RozkladJazdy.DodajPolaczenie(nowePolaczenie);
+                                Rozklad.Rozklad.DodajPolaczenie(nowePolaczenie);
                             }
                             else
                             {
@@ -57,7 +63,7 @@ namespace MainApp
                         case 3:
                             if (zalogowanyUzytkownik.Uprawnienia == "admin")
                             {
-                                RozkladJazdy.ZapiszRozklad();
+                                Rozklad.Rozklad.ZapiszRozklad();
                             }
                             else
                             {
