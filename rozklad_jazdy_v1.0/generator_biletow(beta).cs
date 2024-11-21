@@ -139,16 +139,48 @@ namespace Rozklad
             // Sprawdzenie, czy indeks jest prawidłowy
             if (indeks >= 0 && indeks < rozkladJazdy.Count)
             {
-                Console.WriteLine("Wprowadź nową godzinę odjazdu (HH:mm):");
-                string nowaGodzinaOdjazdu = Console.ReadLine();
-                Console.WriteLine("Wprowadź nową godzinę przyjazdu (HH:mm):");
-                string nowaGodzinaPrzyjazdu = Console.ReadLine();
+                string nowaGodzinaOdjazdu;
+                string nowaGodzinaPrzyjazdu;
+                TimeSpan nowyCzasOdjazdu;
+                TimeSpan nowyCzasPrzyjazdu;
+
+                // Wprowadzanie godziny odjazdu z obsługą błędu
+                while (true)
+                {
+                    Console.WriteLine("Wprowadź nową godzinę odjazdu (HH:mm):");
+                    nowaGodzinaOdjazdu = Console.ReadLine();
+
+                    if (TimeSpan.TryParse(nowaGodzinaOdjazdu, out nowyCzasOdjazdu))
+                    {
+                        // Jeśli godzina jest poprawna, wychodzimy z pętli
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Błędny format godziny! Spróbuj ponownie.");
+                    }
+                }
+
+                // Wprowadzanie godziny przyjazdu z obsługą błędu
+                while (true)
+                {
+                    Console.WriteLine("Wprowadź nową godzinę przyjazdu (HH:mm):");
+                    nowaGodzinaPrzyjazdu = Console.ReadLine();
+
+                    if (TimeSpan.TryParse(nowaGodzinaPrzyjazdu, out nowyCzasPrzyjazdu))
+                    {
+                        // Jeśli godzina jest poprawna, wychodzimy z pętli
+                        break;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Błędny format godziny! Spróbuj ponownie.");
+                    }
+                }
 
                 string[] czesci = rozkladJazdy[indeks].Split(',');
 
                 // Obliczanie nowego czasu dojazdu
-                TimeSpan nowyCzasOdjazdu = TimeSpan.Parse(nowaGodzinaOdjazdu);
-                TimeSpan nowyCzasPrzyjazdu = TimeSpan.Parse(nowaGodzinaPrzyjazdu);
                 if (nowyCzasPrzyjazdu < nowyCzasOdjazdu)
                 {
                     nowyCzasPrzyjazdu = nowyCzasPrzyjazdu.Add(new TimeSpan(24, 0, 0));  // Dodaj jeden dzień do czasu przyjazdu
@@ -165,6 +197,7 @@ namespace Rozklad
                 Console.WriteLine("Nieprawidłowy indeks.");
             }
         }
+
 
         // Funkcja usuwająca połączenie
         static void UsunPolaczenie()
@@ -319,25 +352,25 @@ namespace Rozklad
             string Nazwisko = Console.ReadLine();
 
             string polaczenie = rozkladJazdy[indeks];
-           
+
             string[] czesci = polaczenie.Split(',').Select(c => c.Trim()).ToArray();
 
-            
+
             Console.WriteLine($"Debug: Połączenie: {polaczenie}");
             Console.WriteLine($"Debug: Liczba części: {czesci.Length}");
 
-           
+
             if (czesci.Length < 5)
             {
                 Console.WriteLine("Nieprawidłowe połączenie. Sprawdź dane rozkładu.");
                 return;
             }
 
-           
+
             string bilet = $"Bilet:\nPasażer: {imie}{Nazwisko}\nPołączenie: {czesci[0]} -> {czesci[1]}\nOdjazd: {czesci[1]}\nPrzyjazd: {czesci[2]}\nCena: {czesci[4]}\n\n";
             File.AppendAllText(ticketPath, bilet);
 
-          
+
             GenerateTicketImage(imie, Nazwisko, czesci[0], czesci[1], czesci[1], czesci[2], czesci[4]);
 
             Console.WriteLine("Bilet został zakupiony i zapisany (w pliku bilety.txt)");
@@ -346,15 +379,15 @@ namespace Rozklad
 
 
 
-       
+
         private static void GenerateTicketImage(string imie, string Nazwisko, string from, string to, string godzOdjazdu, string godzinaPrzyjazdu, string cena)
         {
             using (Bitmap image1 = new Bitmap("bilet.jpg", true))
             {
                 Graphics graphics = Graphics.FromImage(image1);
                 Brush brush = new SolidBrush(Color.Black);
-                Font arial = new Font("Arial", 30, FontStyle.Regular);
-                Font arialBoldItalic = new Font("Arial", 50, FontStyle.Bold | FontStyle.Italic);
+                Font arial = new Font("Arial", 10, FontStyle.Regular);
+                Font arialBoldItalic = new Font("Arial", 15, FontStyle.Bold | FontStyle.Italic);
 
                 graphics.DrawString(imie, arial, brush, new Rectangle(200, 1360, 450, 100));
                 graphics.DrawString(Nazwisko, arial, brush, new Rectangle(270, 1470, 450, 100));
@@ -402,7 +435,6 @@ namespace Rozklad
         }
     }
 }
-
 
 
 
