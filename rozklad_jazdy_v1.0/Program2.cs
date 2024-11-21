@@ -233,8 +233,7 @@ internal class Program
 
     }
 
-
-    private static void Panel(string email)
+    public static void Panel(string email)
     {
         bool inPanel = true;
         int wybor = 0;
@@ -626,7 +625,7 @@ internal class Program
 
         } while (inPanel);
     }
-    private static void logowanie()
+    public static void logowanie()
     {
         string email, haslo;
         Console.Clear();
@@ -700,7 +699,7 @@ internal class Program
         } while (true);
     }
 
-    private static void rejestracja()
+    public static void rejestracja()
     {
         string imie, nazwisko, email, haslo, uprawnienia;
         Console.Clear();
