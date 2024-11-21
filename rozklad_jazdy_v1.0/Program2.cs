@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Reflection.Emit;
 using System.Text.RegularExpressions;
 using System.Threading;
+using static Program;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 internal class Program
 {
@@ -120,8 +121,7 @@ internal class Program
     }
     private static void Main(string[] args)
     {
-        string filePath = "users.txt";
-        foreach (var line in File.ReadLines(filePath))
+        foreach (var line in File.ReadLines("users.txt"))
         {
             string[] parts = line.Split(';');
 
@@ -310,6 +310,9 @@ internal class Program
                         case 2:
                             Console.Clear();
                             uzytkownik.zmianaHasla();
+
+                            zapisywanieUzytkownikowDoPliku("users.txt");
+
                             break;
                         case 3:
                             Console.Clear();
@@ -368,6 +371,9 @@ internal class Program
                                 if (SprawdzPoprawnoscHasla(in_haslo) == true)
                                 {
                                     listaUzytkownikow.Add(new User(in_imie, in_nazwisko, in_email, in_haslo, in_uprawnienia));
+
+                                    zapisywanieUzytkownikowDoPliku("users.txt");
+
                                     Console.ForegroundColor = ConsoleColor.Green;
                                     Console.WriteLine("Uzytkownik pomyslnie dodany\n");
                                 }
@@ -439,6 +445,9 @@ internal class Program
                                 if (SprawdzPoprawnoscHasla(in_haslo) == true)
                                 {
                                     listaUzytkownikow[i].edycjaDanych(in_imie, in_nazwisko, in_email, in_haslo, in_uprawnienia);
+
+                                    zapisywanieUzytkownikowDoPliku("users.txt");
+
                                     Console.ForegroundColor = ConsoleColor.Green;
                                     Console.WriteLine("Uzytkownik pomyslnie dodany\n");
                                 }
@@ -511,6 +520,9 @@ internal class Program
                             break;
                         case 2:
                             uzytkownik.zmianaHasla();
+
+                            zapisywanieUzytkownikowDoPliku("users.txt");
+
                             break;
                         case 3:
                             string in_imie, in_nazwisko, in_email, in_haslo = uzytkownik.Haslo, in_uprawnienia = "user";
@@ -534,6 +546,9 @@ internal class Program
                             if (SprawdzPoprawnoscEmail(in_email) == true)
                             {
                                 uzytkownik.edycjaDanych(in_imie, in_nazwisko, in_email, in_haslo, in_uprawnienia);
+                                
+                                zapisywanieUzytkownikowDoPliku("users.txt");
+
                                 Console.ForegroundColor = ConsoleColor.Green;
                                 Console.WriteLine("Dane pomyślnie zmienione!\n");
                                 Thread.Sleep(500);
@@ -554,6 +569,9 @@ internal class Program
                             if (usuwanieKonta == 1)
                             {
                                 listaUzytkownikow.Remove(uzytkownik);
+                                
+                                zapisywanieUzytkownikowDoPliku("users.txt");
+
                                 Console.ForegroundColor = ConsoleColor.Red;
                                 Console.WriteLine("Wylogowywanie...\n");
                                 Thread.Sleep(2000);
@@ -734,6 +752,8 @@ internal class Program
                 User nowyUzytkownik = new User(imie, nazwisko, email, haslo, uprawnienia);
                 listaUzytkownikow.Add(nowyUzytkownik);
 
+                zapisywanieUzytkownikowDoPliku("users.txt");
+
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.Clear();
                 Console.WriteLine("-----------------------------------");
@@ -752,5 +772,17 @@ internal class Program
             }
         } while (true);
 
+    }
+
+
+    private static void zapisywanieUzytkownikowDoPliku(string filePath)
+    {
+        using(StreamWriter writer = new StreamWriter(filePath))
+        {
+            foreach(var user in listaUzytkownikow)
+            {
+                writer.WriteLine($"{user.Imie};{user.Nazwisko};{user.Email};{user.Haslo};{user.Uprawnienia}");
+            }
+        }
     }
 }
