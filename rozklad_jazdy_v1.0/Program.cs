@@ -1,5 +1,5 @@
 using Rozklad;
-using Manager; // Zamiast UserManagement, używamy Manager jako odpowiednika zarządzania użytkownikami
+using Manager
 
 namespace MainApp
 {
@@ -13,11 +13,10 @@ namespace MainApp
                 Console.Write("Podaj swoje imię (Admin/User): ");
                 string imie = Console.ReadLine();
 
-                // Szukanie użytkownika w liście użytkowników
                 User zalogowanyUzytkownik = Manager.listaUzytkownikow.Find(u => u.Imie == imie) 
                                             ?? throw new Exception("Nie znaleziono użytkownika.");
 
-                // Ładowanie rozkładu jazdy, jeśli plik istnieje
+
                 if (File.Exists(Rozklad.Rozklad.sciezkaPliku))
                 {
                     Rozklad.Rozklad.rozkladJazdy.AddRange(File.ReadAllLines(Rozklad.Rozklad.sciezkaPliku));
