@@ -1,6 +1,5 @@
 using Rozklad;
-using Manager
-
+using Manager; 
 namespace MainApp
 {
     internal class MainProgram
@@ -13,9 +12,8 @@ namespace MainApp
                 Console.Write("Podaj swoje imię (Admin/User): ");
                 string imie = Console.ReadLine();
 
-                User zalogowanyUzytkownik = Manager.listaUzytkownikow.Find(u => u.Imie == imie) 
+                User zalogowanyUzytkownik = Manager.listaUzytkownikow.Find(u => u.Imie == imie)
                                             ?? throw new Exception("Nie znaleziono użytkownika.");
-
 
                 if (File.Exists(Rozklad.Rozklad.sciezkaPliku))
                 {
@@ -51,8 +49,7 @@ namespace MainApp
                             if (zalogowanyUzytkownik.Uprawnienia == "admin")
                             {
                                 Console.Write("Podaj nowe połączenie: ");
-                                string nowePolaczenie = Console.ReadLine();
-                                Rozklad.Rozklad.DodajPolaczenie(nowePolaczenie);
+                                Rozklad.Rozklad.DodajPolaczenie();
                             }
                             else
                             {
