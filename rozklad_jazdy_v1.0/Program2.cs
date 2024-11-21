@@ -4,7 +4,7 @@ using System.Reflection.Emit;
 using System.Text.RegularExpressions;
 using System.Threading;
 using static Program;
-using static System.Runtime.InteropServices.JavaScript.JSType;
+
 internal class Program
 {
     public class User
@@ -100,7 +100,14 @@ internal class Program
         string wzorzec = @"^[^@\s]+@[^@\s]+\.[^@\s]+$";
         return Regex.IsMatch(email, wzorzec);
     }
-
+    private static bool CzyIstniejEmail(string email)
+    {
+        if (listaUzytkownikow.Any(u => u.SprawdzEmail(email)))
+        {
+            return true;
+        }
+        else return false;
+    }
 
     public static bool SprawdzPoprawnoscHasla(string haslo)
     {
@@ -121,6 +128,13 @@ internal class Program
     }
     private static void Main(string[] args)
     {
+
+        if(!File.Exists("users.txt"))
+        {
+            File.Create("users.txt").Dispose();
+
+        }
+
         foreach (var line in File.ReadLines("users.txt"))
         {
             string[] parts = line.Split(';');
@@ -131,7 +145,7 @@ internal class Program
             }
         }
 
-        /*
+        /* 
         foreach (var user in listaUzytkownikow)
         {
             Console.WriteLine($"{user.Imie} - {user.Nazwisko} - {user.Email} - {user.Uprawnienia}");
@@ -723,6 +737,13 @@ internal class Program
                 Console.WriteLine("\n\nPodaj adres email: ");
                 Console.ForegroundColor = ConsoleColor.Gray;
                 email = Console.ReadLine()!;
+
+                if(CzyIstniejEmail(email)) {
+                    Console.ForegroundColor = ConsoleColor.Cyan;
+                    Console.Clear();
+                    Console.WriteLine("\nBłąd, istnieje juz konto z takim emailem!"); 
+                    continue; 
+                }
 
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("\n(Haslo powinno zawierac jeden duzy znak, oraz od 5 do 14 liter)");
