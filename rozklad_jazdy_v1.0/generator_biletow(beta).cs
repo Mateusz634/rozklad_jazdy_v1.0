@@ -8,6 +8,7 @@ using System.Drawing;
 using System.IO;
 using System.Linq;
 
+
 namespace Rozklad
 {
     internal class Program
@@ -26,61 +27,92 @@ namespace Rozklad
             {
                 rozkladJazdy.AddRange(File.ReadAllLines(sciezkaPliku));
             }
+         
+            Console.ForegroundColor = ConsoleColor.Blue;
 
             // Wyświetlenie powitania i aktualnego rozkładu
-            Console.WriteLine("Grupa - Romper - Rozklad");
+            Console.WriteLine("   ____                                                                             _    _           _ ");
+            Console.WriteLine("  / ___|_ __ _   _ _ __   __ _   _ __ ___  _ __ ___  _ __   ___ _ __   _ __ ___ ___| | _| | __ _  __| |");
+            Console.WriteLine(" | |  _| '__| | | | '_ \\ / _` | | '__/ _ \\| '_ ` _ \\| '_ \\ / _ | '__| | '__/ _ |_  | |/ | |/ _` |/ _` |");
+            Console.WriteLine(" | |_| | |  | |_| | |_) | (_| | | | | (_) | | | | | | |_) |  __| |    | | | (_) / /|   <| | (_| | (_| |");
+            Console.WriteLine("  \\____|_|   \\__,_| .__/ \\__,_| |_|  \\___/|_| |_| |_| .__/ \\___|_|    |_|  \\___/___|_|\\_|_|\\__,_|\\__,_|");
+            Console.WriteLine("                  |_|                               |_|                                                ");
+           
+         
+            Console.ResetColor();
+            Console.WriteLine("\n\n");
+            Console.ForegroundColor = ConsoleColor.Green;
             Console.WriteLine("O to aktualny rozklad jazdy: ");
+            Console.ResetColor();
             Aktualny_Rozklad();
 
             // Główna pętla programu do obsługi wyboru opcji
             while (true)
             {
-                Console.WriteLine("Wybierz jedna z opcji 1-6");
+                Console.ForegroundColor = ConsoleColor.Green;
+                Console.WriteLine("\nWybierz jedna z opcji 1-6: \n");
+                Console.ResetColor();
                 Console.WriteLine("[1] Dodaj polaczenie");
                 Console.WriteLine("[2] Zaaktualizuj polaczenie");
                 Console.WriteLine("[3] Usuwanie polaczenia");
                 Console.WriteLine("[4] Filtruj");
                 Console.WriteLine("[5] Aktualny rozklad");
                 Console.WriteLine("[6] Kup Bilet");
+                Console.WriteLine("[7] Zapisz rozklad");
                 Console.WriteLine("[0] Zakończ");
 
-                // Odczytanie wyboru użytkownika
-                int wybor = Convert.ToInt32(Console.ReadLine());
 
-                // Przełączanie się między opcjami menu
-                switch (wybor)
+                try
                 {
-                    case 1:
-                        DodajPolaczenie();  // Dodawanie nowego połączenia
-                        break;
-                    case 2:
-                        Aktualizacjia();  // Aktualizowanie istniejącego połączenia
-                        break;
-                    case 3:
-                        UsunPolaczenie();  // Usuwanie połączenia
-                        break;
-                    case 4:
-                        FiltrujPolaczenia();  // Filtrowanie połączeń
-                        break;
-                    case 5:
-                        Aktualny_Rozklad();  // Wyświetlenie aktualnego rozkładu
-                        break;
-                    case 6:
-                        KupBilet();          // opcja do kupna biletu
-                        break;
-                    case 0:
-                        ZapiszRozklad();  // Zapis rozkładu do pliku i zakończenie programu
-                        return;
-                    default:
-                        Console.WriteLine("Nieprawidłowy wybór. Spróbuj ponownie.");
-                        break;
+                    int wybor = Convert.ToInt32(Console.ReadLine());
+
+                    // Przełączanie się między opcjami menu
+                    switch (wybor)
+                    {
+                        case 1:
+                            DodajPolaczenie();  // Dodawanie nowego połączenia
+                            break;
+                        case 2:
+                            Aktualizacjia();  // Aktualizowanie istniejącego połączenia
+                            break;
+                        case 3:
+                            UsunPolaczenie();  // Usuwanie połączenia
+                            break;
+                        case 4:
+                            FiltrujPolaczenia();  // Filtrowanie połączeń
+                            break;
+                        case 5:
+                            Aktualny_Rozklad();  // Wyświetlenie aktualnego rozkładu
+                            break;
+                        case 6:
+                            KupBilet();          // opcja do kupna biletu
+                            break;
+                        case 7:
+                            ZapiszRozklad();  // Zapis rozkładu do pliku i zakończenie programu
+                            break;
+                        case 0:
+                            ZapiszRozklad();
+                            return;
+                        default:
+                            Console.WriteLine("Nieprawidłowy wybór. Spróbuj ponownie.");
+                            break;
+                    }
+                }
+                catch (FormatException)
+                {
+                    Console.Clear();
+                    Console.ForegroundColor = ConsoleColor.Red;
+                    Console.WriteLine("Wprowadzono nieprawidłowy format. Proszę wprowadzić liczbę.");
+                    Console.ResetColor();
                 }
             }
-        }
+            }
 
-        // Funkcja wyświetlająca aktualny rozkład jazdy
-        static void Aktualny_Rozklad()
+            // Funkcja wyświetlająca aktualny rozkład jazdy
+            static void Aktualny_Rozklad()
         {
+            
+            Console.ForegroundColor = ConsoleColor.Yellow;
             if (rozkladJazdy.Count == 0)
             {
                 Console.WriteLine("Brak połączeń w rozkładzie.");
@@ -93,6 +125,7 @@ namespace Rozklad
                     Console.WriteLine($"[{i}] {rozkladJazdy[i]}");
                 }
             }
+            Console.ResetColor();
         }
 
         // Funkcja dodająca nowe połączenie
@@ -133,6 +166,7 @@ namespace Rozklad
         // Funkcja aktualizująca istniejące połączenie
         static void Aktualizacjia()
         {
+         
             Console.WriteLine("Wprowadź indeks połączenia do zmiany:");
             int indeks = Convert.ToInt32(Console.ReadLine());
 
@@ -356,9 +390,6 @@ namespace Rozklad
             string[] czesci = polaczenie.Split(',').Select(c => c.Trim()).ToArray();
 
 
-            Console.WriteLine($"Debug: Połączenie: {polaczenie}");
-            Console.WriteLine($"Debug: Liczba części: {czesci.Length}");
-
 
             if (czesci.Length < 5)
             {
@@ -432,6 +463,7 @@ namespace Rozklad
         {
             File.WriteAllLines(sciezkaPliku, rozkladJazdy);
             Console.WriteLine($"Rozkład jazdy został zapisany do pliku: {sciezkaPliku}");
+            
         }
     }
 }
