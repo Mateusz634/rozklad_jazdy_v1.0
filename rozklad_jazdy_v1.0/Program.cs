@@ -156,32 +156,6 @@ namespace Manager
                     listaUzytkownikow.Add(new User(parts[0], parts[1], parts[2], parts[3], parts[4]));
                 }
             }
-
-            /* 
-            foreach (var user in listaUzytkownikow)
-            {
-                Console.WriteLine($"{user.Imie} - {user.Nazwisko} - {user.Email} - {user.Uprawnienia}");
-            }
-            */
-
-            // ==============
-            // PROJEKT
-            // KRYSTIAN KOZA 
-            // 3TP
-            // ==============
-
-            // TESTOWI UZYTKOWNICY
-
-            // ADMIN - administrator 
-            // mail: admin@gmail.com, haslo: admin
-
-            // USER - normalny uzytkownik
-            // mail: user@gmail.com, haslo: user
-
-            // TESTOWY UZYTKOWNIK - nie powinno go zalogowac bo nie nalezy do grup admin/user
-            // mail: test@gmail.com, haslo: test
-
-            //Console.Clear();
             do
             {
                 try
