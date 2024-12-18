@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+using System.IO;
+
+class RozkladGenerator
+{
+	static string sciezkapliku= "rozklad.txt";
+
+	static void Main(string[] args)
+	{
+		Console.WriteLine("Generator rozkładu jazdy");
+		Console.Write("Podaj liczbę połączeń do wygenerowania: ");
+
+		if (int.TryParse(Console.ReadLine(), out int liczbaPolaczen) && liczbaPolaczen > 0)
+		{
+			GenerujRozklad(liczbaPolaczen);
+			Console.WriteLine($"Wygenerowano rozkład jazdy i zapisano w pliku {sciezkapliku}.");
+		}
+		else
+		{
+			Console.WriteLine("Nieprawidłowa liczba. Spróbuj ponownie.");
+		}
+	}
+
+	static void GenerujRozklad(int liczbaPolaczen)
+	{
+		var random = new Random();
+		var miasta = new List<string> { "Warszawa", "Kraków", "Wrocław", "Gdańsk", "Poznań", "Łódź", "Katowice", "Lublin" };
+		var rozklad = new List<string>();
+
+		for (int i = 0; i < liczbaPolaczen; i++)
+		{
+			string zKad = miasta[random.Next(miasta.Count)];
+			string doKad;
+			do
+			{
+				doKad = miasta[random.Next(miasta.Count)];
+			} while (doKad == zKad);
+
+			
+			DateTime godzinaWyjazdu = DateTime.Today.AddMinutes(random.Next(0, 1440));  
+			TimeSpan czasPodrozy = TimeSpan.FromMinutes(random.Next(30, 300));  
+			DateTime godzinaPrzyjazdu = godzinaWyjazdu.Add(czasPodrozy);  
+
+			
+			if (godzinaPrzyjazdu.Day != godzinaWyjazdu.Day)
+			{
+				
+				godzinaWyjazdu = godzinaWyjazdu.AddDays(1);  
+			}
+
+			decimal cena = Math.Round((decimal)(random.Next(1000, 10000) / 100.0));
+
+			rozklad.Add($"{zKad} - {doKad}, {godzinaWyjazdu:hh\\:mm}, {godzinaPrzyjazdu:hh\\:mm}, {czasPodrozy.TotalMinutes} min, {cena} PLN");
+		}
+
+		File.WriteAllLines(sciezkapliku, rozklad);
+	}
+}
+
