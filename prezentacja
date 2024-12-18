@@ -26,3 +26,65 @@ Wybranie języka c#
 Dodanie bibliotek do generowania biletu jako zdjęcia wraz z kodem QR
 
 d)
+
+g) Załączniki
+Fragmenty kodu źródłowego
+Przykład funkcji rejestracji:
+
+public static void rejestracja()
+{
+    string imie, nazwisko, email, haslo, uprawnienia;
+    Console.Clear();
+    do
+    {
+        try
+        {
+            Console.WriteLine("=============");
+            Console.WriteLine(" REJESTRACJA ");
+            Console.WriteLine("=============");
+            Console.WriteLine("\nPodaj swoje imie: ");
+            imie = Console.ReadLine()!;
+            Console.WriteLine("\nPodaj adres email: ");
+            email = Console.ReadLine()!;
+
+            if (CzyIstniejEmail(email))
+            {
+                Console.WriteLine("\nBłąd, istnieje już konto z takim emailem!");
+                continue;
+            }
+
+            Console.WriteLine("\nPodaj hasło: ");
+            haslo = Console.ReadLine()!;
+
+            if (SprawdzPoprawnoscHasla(haslo) == false)
+            {
+                Console.WriteLine("\nBłąd! - Hasło jest niepoprawne. Spróbuj jeszcze raz.\n");
+                continue;
+            }
+
+            uprawnienia = "user";
+            User nowyUzytkownik = new User(imie, nazwisko, email, haslo, uprawnienia);
+            listaUzytkownikow.Add(nowyUzytkownik);
+            Console.WriteLine("Rejestracja zakończona pomyślnie!");
+            break;
+        }
+        catch (Exception error)
+        {
+            Console.WriteLine($"Błąd! - {error.Message}");
+        }
+    } while (true);
+}
+
+Wyniki testów
+Scenariusz: Rejestracja nowego użytkownika
+
+Wejście: imie: Jan, nazwisko: Kowalski, email: jan.kowalski@gmail.com, hasło: Haslo123
+Wynik: Sukces, użytkownik zapisany w pliku users.txt.
+Scenariusz: Logowanie nieistniejącego użytkownika
+
+Wejście: email: jan.kowalski@gmail.com, hasło: rekinek123
+Wynik: Komunikat o błędnym logowaniu.
+
+Scenariusz: Dodanie nowego połączenia do rozkładu jazdy
+Wejście: Warszawa - Kraków, 10:00, 14:00, 100
+Wynik: Połączenie zapisane w rozkładzie.
