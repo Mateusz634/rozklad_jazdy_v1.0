@@ -1,0 +1,64 @@
+using Microsoft.Maui.Controls;
+using System.Text.RegularExpressions;
+
+namespace projekt
+{
+    public partial class registerPage : ContentPage
+    {
+        public registerPage()
+        {
+            InitializeComponent();
+        }
+
+        // Metoda wywoływana po kliknięciu ikony strzałki
+        private async void OnBackButtonClicked(object sender, EventArgs e)
+        {
+            await Navigation.PopAsync();
+        }
+
+        private async void OnRegisterUPButtonClicked(object sender, EventArgs e)
+        {
+            ErrorLabel.Text = " ";
+            string name = NameEntry.Text;
+            string surname = SurnameEntry.Text;
+            string email = emailEntry.Text;
+            string password = PasswordEntry.Text;
+            string adminPassword = PermissionEntry.Text;
+
+            if (userManager.CzyIstniejEmail(email))
+            {
+                ErrorLabel.Text = "Istnieje juz konto z takim adresem email!";
+                Task.Delay(500).Wait();
+            }
+
+            if (userManager.SprawdzPoprawnoscHasla(password) == false || userManager.SprawdzPoprawnoscEmail(email) == false)
+            {
+                ErrorLabel.Text = "Niepoprawny format emailu albo hasla";
+                Task.Delay(500).Wait();
+            }
+
+            if(userManager.SprawdzPoprawnoscHasla(password) && userManager.SprawdzPoprawnoscEmail(email) && userManager.CzyIstniejEmail(email))
+            {
+                User newUser = new User(name, surname, email, password, adminPassword);
+
+                userManager.AddUser(newUser);
+
+                Task.Delay(500).Wait();
+
+                NameEntry.Text = string.Empty;
+                SurnameEntry.Text = string.Empty;
+                emailEntry.Text = string.Empty;
+                PasswordEntry.Text = string.Empty;
+                PermissionEntry.Text = string.Empty;
+
+                await Navigation.PopToRootAsync();
+            }
+        }
+
+    }
+}
+
+
+
+
+
